@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Tilt+Warp&display=swap');
+
+:root {
+  --variable: 0;
+  --primary-bg: #161616;
+  --secondary-bg: #161616;
+
+
+  /*---------------------------------------------*/
+  /*          Text Emphasis Constants            */
+  /*---------------------------------------------*/
+    --high-emphasis-text: 0.87;
+    --medium-emphasis-text: 0.60;
+    --low-emphasis-text: 0.38;
+  /*---------------------------------------------*/
+  /*             Other Text Constants            */
+  /*---------------------------------------------*/
+  /* DEV-TASK [Easy]: Change the Following to be em instead of pixels
+     once this is done we can change a single font variable and 
+     it will be able to adjust all text on the webpage at once! */
+    --larger-text: 36px;
+    --large-text: 24px;
+    --medium-text: 20px;
+    --small-text: 18px;
+    --smaller-text: 16px;
+    --smallest-text: 14px;
+    --line-height: 1.5;
+    --primary-text-color: #fff;
+  /*---------------------------------------------*/
+  /*          Webpage Header Constants           */
+  /*---------------------------------------------*/
+    --header-height: 70px;
+    --header-text-size: var(--small-text);
+    --scroll-progress: 0vw;
+  /*---------------------------------------------*/
+  /*         Webpage Toolbar Constants           */
+  /*---------------------------------------------*/
+    --toolbar-vertical-width: 50px;
+    --toolbar-vertical-height: 275px;
+/*---------------------------------------------*/
+/*           ^ End of CSS constants ^          */
+/*---------------------------------------------*/
+    font-family: 'Tilt Warp', cursive !important;
+    color: var(--primary-text-color);
+}
+
+/*---------------------------------------------*/
+/*           General CSS Classes Below         */
+/*---------------------------------------------*/
+.flex { display: flex !important; }
+.flow-row { display: flex; flex-flow: row; }
+.flow-col { display: flex; flex-flow: column; }
+.justify-center { display: flex; justify-content: center; }
+.align-center { display: flex; align-items: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.justify-end { display: flex; justify-content: flex-end;}
+.justify-start { display: flex; justify-content: flex-start; }
+.justify-sb { display: flex; justify-content: space-between; }
+.justify-sa { display: flex; justify-content: space-around; }
+.fit-content { width: fit-content; }
+.fill-horizontal { flex: 1; display: flex;}
+.margin-0 { margin: 0 !important; }
+.padding-bottom-0 { padding-bottom: 0 !important; }
+.padding-bottom-5 { padding-bottom: 5px !important; }
+.margin-bottom-10 { margin-bottom: 10px !important; }
+/*---------------------------------------------*/
+/*         ^ End of CSS General Classes ^      */
+/*---------------------------------------------*/
+
+.icon-bg-blue {
+  background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)) !important;
+}
+
+.icon-bg-pink {
+  background: linear-gradient(195deg, rgb(236, 64, 122), rgb(216, 27, 96)) !important;
+}
+
+.icon-bg-green {
+  background: linear-gradient(195deg, rgb(102, 187, 106), rgb(67, 160, 71)) !important;
+}
+
+.icon-bg-orange {
+    background: linear-gradient(195deg, rgb(255, 148, 48) 11.2%, rgb(255, 124, 0) 100.2%) !important;
+}
+
+.icon-bg-black {
+  background: linear-gradient(195deg, rgb(66, 69, 74), rgb(27, 27, 27)) !important;
+}
+
+div, span, p {
+   box-sizing: border-box; 
+   font-family: 'Tilt Warp', cursive !important;
+
+}
+
+p {
+  font-size: var(--smaller-text);
+  opacity: var(--low-emphasis-text);
+}
+
+header {
+  position: fixed;
+  height:  var(--header-height);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.035);
+  box-sizing: border-box;
+  z-index: 99999;
+
+  /* DEV-TASK [Novice]: Make a better dropshadow below */
+  box-shadow:  0px 20px 15px 1px rgb(0 0 0 / 40%);
+}
+
+header::after {
+  position: absolute;
+  height: 2.5px;
+  background-color: rgba(255, 255, 255, 0.35);
+  width: 100%;
+  content: "";
+  top:  var(--header-height);
+}
+
+header::before {
+  position: absolute;
+  height: 2.5px;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 100%;
+  content: "";
+  top:  var(--header-height);
+  left: calc(-1 * var(--scroll-progress));
+}
+
+header > div:first-of-type { padding-left: 7.5px; }  /* Value is 1 times 7.5  -> 7.5 x 3 = 7.5  */
+header > div:last-of-type { padding-right: 22.5px; } /* Value is 3 times 7.5  -> 7.5 x 3 = 22.5 */
+
+
+
+.header-logo-container img { width: 55px; height: 55px; } 
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  position: relative;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for other browsers  */
+body::-webkit-scrollbar { display: none; }
+
+
+.primary-bg {
+  background: var(--primary-bg) !important;
+}
+
+
+/*
+
+*/
+
+
+
+
+.webpage-section-container {
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: initial;*/
+  height: auto;
+
+  display: flex;
+  flex-flow: column;
+
+  margin: 15px 40px;
+  padding: 10px 0px;
+}
+
+.webpage-section-container h3 {
+  font-size: var(--larger-text);
+
+  max-width: 450px;
+  text-align: center;
+
+  margin: 0 auto;
+
+  padding: 10px 0px;
+
+}
+
+
+
+.webpage-content-section-container {
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: initial;*/
+  height: auto;
+
+  display: flex;
+  flex-flow: row;
+
+  margin: 15px 50px;
+  padding: 10px 0px;
+}
+
+.webpage-content-section-container h3 {
+  font-size: var(--larger-text);
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 5px 0px ;
+
+}
+
+.webpage-content-section-container h5 {
+  font-size: var(--medium-text);
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 15px 0px ;
+}
+
+.webpage-content-section-graphic-box {
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+}
+
+.webpage-content-section-main-box {
+  flex: 1;
+  height: auto;
+  margin-right: 10px;
+  padding: 0px 25px;
+}
+
