@@ -13,7 +13,7 @@
 .hero-wrapper h2 {
     margin: 90px 0px 0px 0px;
     padding: 0px;
-    font-size: 18px;
+    font-size: var(--medium-text);
     opacity: var(--high-emphasis-text);
 }
 
@@ -21,7 +21,7 @@
     margin: 2.5px 0px 0px 0px;
     padding: 0px;
 
-    font-size: 56px;
+    font-size: var(--largest-text);
     opacity: var(--high-emphasis-text);
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
@@ -30,7 +30,7 @@
     margin: 5px 0px 0px 0px;
     padding: 0px;
 
-    font-size: 20px;
+    font-size: var(--medium-text);
     opacity: var(--high-emphasis-text);
 }
 
@@ -53,7 +53,7 @@
    display: block;
 
     text-align: center;
-    font-size: 142px;
+    font-size: var(--massive-text); /*Background text in hero section*/
 
     opacity: 0.025;
 
