@@ -1,0 +1,40 @@
+.searchbar-container {
+    min-width: 90%;
+    padding: 5px;
+    /* margin: 0 0px 0 40px; /
+    border-radius: 10px;
+    / transform: scale(0.8);*/
+
+  }
+
+  .searchbar-container form {
+    width: 100%;
+    padding: 0px 5px;
+    display: flex;
+    font-family: 'Kanit', Inter, Avenir, Helvetica, Arial, sans-serif !important;
+  }
+
+  .searchbar-container input {
+    font-family: 'Kanit', Inter, Avenir, Helvetica, Arial, sans-serif !important;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    border: none;
+    margin-left: 5px;
+    font-size: var(--flyerfly-smaller-text);
+    color: #fff;
+    opacity: var(--flyerfly-high-emphasis-text);
+  }
+
+  .searchbar-container button {
+    background: transparent;
+    border: none;
+    outline: none;
+    height: auto;
+    width: auto;
+    padding: 0px 15px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }

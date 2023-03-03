@@ -7,10 +7,29 @@
 
 /* Header CSS below */
 
+.header-link-container a:hover {
+    border-bottom: 2.5px solid var(--primary-text-highlight-color);
+    
+    z-index: 9999999;
+    /* animation: fade 0.6s infinite alternate; */
+    /* transform: none; */
+}
+/* @keyframes fade {
+    from {color: var(--primary-text-color); }
+    to {color: var(--primary-text-highlight-color);}
+} */
+.header-signup-button {
+    background-color: rgb(73, 154, 48);
+    color: black;
+    border-radius: 25px 25px 25px 25px;
+    transform: none;
+    animation: none;
+    text-shadow: none;
+}
+
 .header-link-container {
     gap: 30px;
     background-color: #1e1e1e; 
-
 }
 
 .header-link-container a {

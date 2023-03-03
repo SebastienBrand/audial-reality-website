@@ -25,11 +25,12 @@ const HeaderComponent = (props) => {
     }, {
         title: 'labore',
         link: 'https://google.com'
-    }, {
+    }
+    ]
+    var sign_up_button ={
         title: 'Sign In | Sign Up',
         link: 'https://google.com'
     }
-    ]
 
     return (
         <header className="flex flex-row">
@@ -48,6 +49,9 @@ const HeaderComponent = (props) => {
                         </Link>
                     );
                })} 
+               <Link className={`flex flex-center ${styles['header-signup-button']}`} href={sign_up_button.link}>
+                    {sign_up_button.title}
+               </Link>
             </div>
         </header>
     );
