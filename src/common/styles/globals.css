@@ -45,7 +45,7 @@
 /*---------------------------------------------*/
 /*           ^ End of CSS constants ^          */
 /*---------------------------------------------*/
-    font-family: 'Tilt Warp', cursive !important;
+    font-family: 'Tilt Warp' !important;
     color: var(--primary-text-color);
 }
 
@@ -94,7 +94,7 @@
 
 div, span, p {
    box-sizing: border-box; 
-   font-family: 'Tilt Warp', cursive !important;
+   font-family: 'Tilt Warp' !important;
 
 }
 
