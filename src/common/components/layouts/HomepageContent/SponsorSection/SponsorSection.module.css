@@ -9,3 +9,12 @@
     margin: 50px 0px;
 
 }
+
+.spnosor-section-container img {
+
+    height: 85px;
+    width: auto;
+    filter: grayscale(1);
+    margin-inline: 50px;
+
+}

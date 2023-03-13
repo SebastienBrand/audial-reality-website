@@ -49,7 +49,7 @@ const HeaderComponent = (props) => {
                         </Link>
                     );
                })} 
-               <Link className={`flex flex-center ${styles['header-signup-button']}`} href={sign_up_button.link}>
+               <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={sign_up_button.link}>
                     {sign_up_button.title}
                </Link>
             </div>

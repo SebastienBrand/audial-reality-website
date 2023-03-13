@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import styles from './webpage.module.css'
 import HeaderComponent from "./header.component.jsx";
+import FooterComponent from "./footer.component.jsx";
 import ToolbarComponent from "./toolbar.component.jsx";
 
 const WebpageWrapper = (props) => {
@@ -37,6 +38,7 @@ const WebpageWrapper = (props) => {
             <div id="page-container" className={`primary-bg ${styles['webpage-container']}`} >
               { props.children }
             </div>
+            <FooterComponent />
             <ToolbarComponent displayVerical={isScreenVertical} />
         </>
     )

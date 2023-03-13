@@ -3,7 +3,7 @@ import React, { useState, createContext, useContext, useEffect, useRef } from "r
 import { FaSearch } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 
-function SearchBar(props){
+const SearchBar = (props) => {
     const [searchText, setSearchText] = useState("")
 
     const style = {
@@ -18,7 +18,7 @@ function SearchBar(props){
     }
 
     return ( 
-       <div className={`${styles['searchbar-container']}`}>
+       <div className={`${styles['searchbar-container']}`} style={style}>
             <form method="get" action="">
                 <input type="text" placeholder="Search" value={searchText} 
                     onChange={e => setSearchText(e.target.value)} required />
@@ -51,4 +51,4 @@ SearchBar.defaultProps = {
     handleClick: () => {  }
 }
 
-export default SearchBar
+export default SearchBar;

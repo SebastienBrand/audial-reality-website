@@ -20,3 +20,94 @@
 .support-padding-top {
     padding-top: 50px;
 }
+
+
+
+.button-wrapper {
+  width: 100%;
+  height: auto;
+
+  margin: 25px 0px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.button-wrapper button {
+  position: relative;
+  border: 0;
+  text-decoration: none;
+  /*line-height: 38px;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  gap: 10px;
+  padding: 10px 25px 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255,255,255, var(--high-emphasis-text));
+  /*margin: 10px 0px 0p;*/
+  background: #191919; /*#343434*/
+  height: fit-content;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 5px;
+  cursor: pointer;
+
+}
+
+.button-wrapper button svg path {
+    transition: all 0.3s ease;
+  }
+
+  .button-wrapper button:hover {
+    color: rgba(255,255,255, 1);
+  }
+
+  .button-wrapper button:hover svg path {
+    color:rgba(255,255,255, 1);
+  }
+
+
+  .button-wrapper button:after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    left: -300px;
+    transform: skewX(-25deg);
+    /*background: linear-gradient(to right,transparent,rgba(white, .14),transparent);*/
+    background: linear-gradient(to right, transparent, transparent, rgba( 255, 255, 255, .25), transparent);
+    height: 50px;
+  }
+
+  .button-wrapper button:hover:after{
+    animation: shine .8s ease;
+  }
+
+    @keyframes shine {
+        to{
+            left: 400px; 
+        }
+    }
+
+
+
+    .support-wrapper {
+      display: flex;
+    }
+
+    
+    @media (max-width: 1000px) {
+      .support-wrapper {
+        flex-flow: column;
+        /*height: 400px;*/
+      }
+
+      .support-second-box {
+        min-height: 300px;
+        justify-content: center;
+      }
+
+    }

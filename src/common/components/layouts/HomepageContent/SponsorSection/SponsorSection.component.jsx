@@ -2,8 +2,9 @@ import styles from './SponsorSection.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Marquee from "react-fast-marquee";
 
-import Image1 from '@/images/location.png';
+import Google from '@/images/google-logo.png';
 
 
 import { BsChevronDoubleDown } from 'react-icons/bs'
@@ -16,9 +17,14 @@ export default function SponsorSection( props ){
 
      return ( 
         <div className={`flex flow-row ${styles['spnosor-section-container']}`}>
-           { /* DEV-TASK [Hard-Difficult]: Make a marquee animation for the sponsors. To do so get a list of images and make 
-                them greyscale with filter and grey scale properties. Then make them slowly scroll left to right across the screen in this container.
-                Making the looping seemless so it looks as if it is never ending. This can also be done with a pop and push method as well. */}
+            <Marquee gradient={false} style={{ background: 'transparent !important', }}>
+               <Image src={Google} />
+               <Image src={Google} />
+               <Image src={Google} />
+               <Image src={Google} />
+               <Image src={Google} />
+               <Image src={Google} />
+            </Marquee>
         </div>
     )
     

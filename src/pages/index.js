@@ -10,6 +10,12 @@ import { GridSection } from '@/GridSection'
 import { FeaturesSection } from "@/FeaturesSection"
 import { SponsorSection } from "@/SponsorSection"
 import { SupportSection } from "@/SupportSection"
+import { BlogSection } from "@/BlogSection"
+
+
+
+
+import { SearchBar } from "@/components/SearchBar/__index.js"
 
 
 
@@ -22,6 +28,7 @@ export default function Home() {
         <FeaturesSection />
         <SponsorSection />
         <SupportSection />
+        <BlogSection />
       </WebpageWrapper>
   )
 }
