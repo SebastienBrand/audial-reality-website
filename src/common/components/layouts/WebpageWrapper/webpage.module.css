@@ -27,6 +27,7 @@
 .header-link-container {
     gap: 30px;
     background-color: #1e1e1e; 
+    font-weight: bolder;
 }
 
 .header-link-container a {

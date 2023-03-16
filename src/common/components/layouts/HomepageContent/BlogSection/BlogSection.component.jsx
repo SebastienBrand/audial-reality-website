@@ -7,14 +7,13 @@ import Temp_Post_Picture from '@/images/temp-post-pic.jpg';
 
 
 function PostShowcase(props){
-
+  
     return (
         <div className={`flex flex-center flow-col ${styles['post-showcase-content-box']}`} >
-            <Image src={Temp_Post_Picture} />
-            <h5>Rhoncus aenean vel elit</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a href="/"> Continue Reading </a>
-
+            <Image src={props.data.featuredImage.node.sourceUrl} alt={props.data.featuredImage.node.altText} width={1000} height={500} />
+            <h5 dangerouslySetInnerHTML={{ __html: props.data.title, }} />
+            <div dangerouslySetInnerHTML={{ __html: props.data.excerpt, }} />
+            <a href={props.data.path}> Continue Reading </a>
         </div>
     )
 }
@@ -24,31 +23,21 @@ function PostShowcase(props){
 
 export default function BlogSection(props){
 
+    console.log(props.allPosts)
+
     return (
         <div className={`flex flow-col webpage-section-container ${styles['blog-top-margin']}`} >
             <h3 className={`text-align-center`}>Rhoncus aenean vel elit</h3>
             <h5 className={`text-align-center`}>Ipsum dolor sit amet consectetur adipiscing</h5>
             <div className={`${styles['blog-showcase-wrapper']}`}>
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div>
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div>
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div>
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div>
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div> 
-                <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} >
-                    <PostShowcase />
-                </div>
-
-
+                {props.allPosts && props.allPosts.length > 0 && props.allPosts.map(( element, index ) => {
+                    return (
+                        <div className={`flex flex-center ${styles['post-showcase-wrapper']}`} key={element.id} >
+                            <PostShowcase data={element} />
+                        </div>
+                    )
+                })}
+                { /* Make a loading Thing */}
             </div>
         </div>
     )

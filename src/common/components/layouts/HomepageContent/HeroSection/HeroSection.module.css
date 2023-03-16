@@ -8,12 +8,14 @@
 
     align-items: center;
 
+    font-weight: bolder;
+
 }
 
 .hero-wrapper h2 {
     margin: 90px 0px 0px 0px;
     padding: 0px;
-    font-size: var(--medium-text);
+    font-size: var(--large-text);
     opacity: var(--high-emphasis-text);
 }
 

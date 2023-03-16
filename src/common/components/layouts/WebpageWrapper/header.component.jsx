@@ -44,7 +44,7 @@ const HeaderComponent = (props) => {
                         /* DEV-TASK [Easy-Medium]: Make the Sign In | Sign Up Its own button with a clean minimalistic animation */
                         /* DEV-TASK [Hard-Diffiucult]: Make drop down menus compatible with the following code. 
                             Another loop and sub arrays will be needed for this to be acheived */
-                        <Link className="flex flex-center" href={element.link}>
+                        <Link className="flex flex-center" key={"Header-Element-" + index} href={element.link}>
                             {element.title}
                         </Link>
                     );

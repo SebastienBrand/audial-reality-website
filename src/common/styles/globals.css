@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Tilt+Warp&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+@layer base {
+  html {
+    font-family: 'main-font', Proxima Nova, system-ui, sans-serif !important;
+  }
+}
 
 :root {
   --variable: 0;
@@ -19,12 +28,12 @@
   /* DEV-TASK(DONE) [Easy]: Change the Following to be em instead of pixels
      once this is done we can change a single font variable and 
      it will be able to adjust all text on the webpage at once! */
-    --base-font-size: 16px;
+    --base-font-size: 16.5px;
 
     --massive-text: 8.875em;
     --largest-text:  3.5em;
     --larger-text: 2.25em;
-    --large-text: 1.5em;
+    --large-text: 1.70em;
     --medium-text: 1.25em;
     --small-text: 1.125em;
     --smaller-text: 1em;
@@ -47,7 +56,6 @@
 /*---------------------------------------------*/
 /*           ^ End of CSS constants ^          */
 /*---------------------------------------------*/
-    font-family: 'Tilt Warp' !important;
     color: var(--primary-text-color);
 }
 
@@ -96,9 +104,13 @@
   background: linear-gradient(195deg, rgb(66, 69, 74), rgb(27, 27, 27)) !important;
 }
 
+
+h1, h2, h3, h4, h5 {
+  font-weight: bolder;
+}
+
 div, span, p, button {
    box-sizing: border-box; 
-   font-family: 'Tilt Warp' !important;
 
 }
 
@@ -573,3 +585,113 @@ application and make sure the application still runs properly */
     transform: rotate(0deg);
   }
 }
+
+
+
+
+
+
+.post-page-wrapper {
+
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: initial;*/
+  height: auto;
+
+  display: flex;
+  flex-flow: column;
+
+  overflow: hidden;
+
+}
+
+.post-banner {
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+
+  margin-bottom: 100px;
+}
+
+
+.post-banner img {
+  position: absolute;
+  bottom: 0px;
+
+  height: auto;
+
+
+  max-width: 100%;
+  width: 100%;
+
+  min-height: 250px;
+
+  
+  object-fit: cover;
+}
+
+
+.post-title-box {
+  height: 80px;
+  width: 60%;
+  position: absolute;
+  bottom: -65px;
+
+  border-radius: 10px 10px 0px 0px;
+
+  background-color: #1c1c1c;
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-details-wraper {
+  position: relative;
+  width: 100%;
+}
+
+
+.post-details {
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  height: 20px;
+
+  width: -webkit-fill-available;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 15px;
+  margin-inline: 5px;
+}
+
+.post-details span {
+  opacity: var(--medium-emphasis-text);
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+
+.post-title-box h1 {
+  font-size: var(--large-text);
+  opacity: var(--header-text-size);
+  text-align: center;
+}
+
+.post-content-wrapper {
+  display: flex;
+  flex-flow: column;
+
+  margin-inline: 5rem;
+}
+
