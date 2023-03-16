@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from "next/head";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,22 +17,16 @@ import DOMPurify from 'isomorphic-dompurify';
 
 
 export default function Post({ post, site }) {
-  const HTML_Handler = ( data ) => {
-    //let updated_html = data.replaceAll(`classname`, `class`)
-    let updated_html = DOMPurify.sanitize(data)
-
-    return updated_html
-  }
-  console.log(post)
-  console.log("------------------")
-  console.log(site)
-
+  
   return (
     <WebpageWrapper>
+        <Head>
+            <link rel="stylesheet" href="http://soundscape-website.local/wp-content/themes/BingoPress/style.css" />
+        </Head>
         <div className={`flex flow-col post-page-wrapper`} >
           {/* ---------------------------------------------------------------------------------------------------- */}
           <div className="post-banner" > 
-            <Image src={Banner} alt="Post-Banner"/>
+            <Image loading="lazy" src={Banner} alt="Post-Banner"/>
             <div className="post-title-box">
               <h1 dangerouslySetInnerHTML={{ __html: post.title, }} />
               <div className="post-title-box-below">
@@ -43,11 +38,9 @@ export default function Post({ post, site }) {
             </div>
           </div>
           {/* ---------------------------------------------------------------------------------------------------- */}
-          <div className="post-content-wrapper" dangerouslySetInnerHTML={{ __html: HTML_Handler(post.content), }}>
-       
-          </div>
+          { post.content && <div className="post-content-wrapper" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content), }} /> }
           {/* ---------------------------------------------------------------------------------------------------- */}
-          <a href="/" style={{ margin: "15px auto 50px auto" }}> Back to the Home Page </a> 
+          <Link href="/" style={{ margin: "15px auto 50px auto" }}> Back to the Home Page </Link> 
         </div>
     </WebpageWrapper>
   );
@@ -100,16 +93,16 @@ export async function getStaticProps({ params, locale }) {
 
   let post = data?.data.postBy;
 
-  const site = {
-    ...data?.data.generalSettings,
-  };
+  //const site = {
+  //  ...data?.data.generalSettings,
+  //};
 
   return {
     props: {
       post,
       language,
       path: `/posts/${post.slug}`,
-      site,
+      //site,
     },
     revalidate: 10,
   };
@@ -135,7 +128,6 @@ export async function getStaticPaths({ locales }) {
   });
 
   const posts = data?.data.posts.edges.map(({ node }) => node);
-
   const paths = posts.map(({ slug }) => {
     return {
       params: {

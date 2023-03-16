@@ -35,7 +35,7 @@ const HeaderComponent = (props) => {
     return (
         <header className="flex flex-row">
             <div className="flex flex-center fit-content header-logo-container"> 
-                <Image src={Logo} alt="Audio Reality Logo" /> 
+                <Image loading="lazy" src={Logo} alt="Audio Reality Logo" /> 
             </div>
             <div className={`flex fill-horizontal flow-row justify-end ${styles['header-link-container']}`}>
                {temp_array.map(( element, index ) => {

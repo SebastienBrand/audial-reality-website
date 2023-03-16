@@ -116,7 +116,7 @@ div, span, p, button {
 
 p {
   font-size: var(--smaller-text);
-  opacity: var(--low-emphasis-text);
+  color: rgba(255, 255, 255, var(--low-emphasis-text))
 }
 
 header {

@@ -16,22 +16,22 @@ import { BsChevronDoubleDown } from 'react-icons/bs'
 
 let my_array = [ 
     {   title: 'Lorem Ipsum 1',
-        image: (  <Image src={ Headphone } alt=""></Image>)
+        image: (  <Image loading="lazy" src={ Headphone } alt=""></Image>)
     }, 
     {   title: 'Lorem Ipsum 2',
-        image: (  <Image src={ Beacon } alt=""></Image>) 
+        image: (  <Image loading="lazy" src={ Beacon } alt=""></Image>) 
     },  
     {   title: 'Lorem Ipsum 3',
-        image: (  <Image src={ Battery } alt=""></Image>) 
+        image: (  <Image loading="lazy" src={ Battery } alt=""></Image>) 
     }, 
     {   title: 'Lorem Ipsum 4',
-        image: (  <Image src={ Headphone } alt=""></Image>) 
+        image: (  <Image loading="lazy" src={ Headphone } alt=""></Image>) 
     }, 
     {   title: 'Lorem Ipsum 5',
-        image: (  <Image src={ Beacon } alt=""></Image>) 
+        image: (  <Image loading="lazy" src={ Beacon } alt=""></Image>) 
     },    
     {   title: 'Lorem Ipsum 6',
-        image: (  <Image src={ Battery } alt=""></Image>) 
+        image: (  <Image loading="lazy" src={ Battery } alt=""></Image>) 
     }]
 
 export default function FeaturesSection( props ){
