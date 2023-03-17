@@ -59,7 +59,7 @@ export default function Hero( props ){
              <span className={`${styles['hero-background-text']}`}> Auditory Enhancements </span>
              <h2>Lorem Ipsum Dalor</h2>
              <h1>Big Super Fancy Title</h1>
-             <Image src={Image1} alt="" >
+             <Image src={Image1} alt="" />
              <h5>incididunt ut labore et dolore magna</h5>
             <ProgressPath />
             <div className={`flex flow-row justify-sb ${styles['continue-scrolling-section']}`}>
@@ -68,5 +68,5 @@ export default function Hero( props ){
             </div>
         </div>
     )
-    
+      
 }

@@ -116,7 +116,12 @@
     padding-top: 7.5px;
 }
 
+.footer-bottom-content p{
+    color: #fff;
+}
+
 .footer-bottom-content {
+    
     display: flex;
     width: auto;
     flex-flow: row;
