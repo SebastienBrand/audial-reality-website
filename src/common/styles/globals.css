@@ -123,7 +123,7 @@ header {
   position: fixed;
   height:  var(--header-height);
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.035);
+  background-color: rgb(30 30 30);
   box-sizing: border-box;
   z-index: 99999;
 
