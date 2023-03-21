@@ -17,7 +17,6 @@ import { getApolloClient } from "../lib/apollo-client";
 
 
 export default function Home({ page, posts }) {
-  console.log(posts)
 
   return (
       <WebpageWrapper>
@@ -73,7 +72,6 @@ export async function getStaticProps({ locale }) {
   });
 
   let posts = data?.data.posts.edges
-
     .map(({ node }) => node)
     .map((post) => {
       return {
@@ -83,9 +81,7 @@ export async function getStaticProps({ locale }) {
       };
     });
 
-  const page = {
-    ...data?.data.generalSettings,
-  };
+  const page = { ...data?.data.generalSettings, };
 
   return {
     props: {
