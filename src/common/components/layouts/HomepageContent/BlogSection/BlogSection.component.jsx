@@ -10,7 +10,7 @@ function PostShowcase(props){
   
     return (
         <div className={`flex flex-center flow-col ${styles['post-showcase-content-box']}`} >
-            <Image src={props.data.featuredImage.node.sourceUrl} alt={props.data.featuredImage.node.altText} width={1000} height={500} />
+            <Image src={props.data.featuredImage?.node.sourceUrl} alt={props.data.featuredImage?.node.altText} width={1000} height={500} />
             <h5 dangerouslySetInnerHTML={{ __html: props.data.title, }} />
             <div dangerouslySetInnerHTML={{ __html: props.data.excerpt, }} />
             <a href={props.data.path}> Continue Reading </a>
