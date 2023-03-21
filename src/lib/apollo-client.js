@@ -20,7 +20,7 @@ export function getApolloClient() {
 export function _createApolloClient() {
   return new ApolloClient({
     link: new HttpLink({
-      uri: "http://soundscape-website.local/graphql",
+      uri: process.env.GRAPHQL_ENDPOINT,
     }),
     cache: new InMemoryCache(),
   });
