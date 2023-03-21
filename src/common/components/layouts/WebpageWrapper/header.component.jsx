@@ -1,12 +1,9 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
-//import styles from './webpage.module.css'
 import styles from './webpage.module.css'
 import Logo from "@/AR-Logo"
 
 import Image from 'next/image';
 import Link from 'next/link';
-
-
 
 
 const HeaderComponent = (props) => {
@@ -48,10 +45,10 @@ const HeaderComponent = (props) => {
                             {element.title}
                         </Link>
                     );
-               })} 
-               <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={sign_up_button.link}>
-                    {sign_up_button.title}
-               </Link>
+               })}
+            <Link className={`flex flex-center ${styles['header-signup-button']}`} href={sign_up_button.link}>
+                {sign_up_button.title}
+            </Link> 
             </div>
         </header>
     );

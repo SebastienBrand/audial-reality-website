@@ -1,14 +1,16 @@
 import { SearchBar } from "@/components/SearchBar/__index"
+import { Button } from "@/components/Button/__index"
 
-///Proptypes
+
+
+//Proptypes
 
 
 export default function TestPage(props) {
     return (
-        <>
-        <>Hello World</>
-       
-        </>
+      <div>
+      <Button></Button>
+      </div>
     )
 }
 /*

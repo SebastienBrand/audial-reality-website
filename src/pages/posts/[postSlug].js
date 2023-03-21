@@ -47,12 +47,13 @@ export default function Post({ post, site }) {
 }
 
 export async function getStaticProps({ params, locale }) {
+
   const { postSlug } = params;
   const language = locale.toUpperCase();
 
   const apolloClient = getApolloClient();
 
-  const data = await apolloClient.query({
+  const data = await apolloClient.query({    
     query: gql`
       query PostBySlug($slug: String!, $language: LanguageCodeEnum!) {
         generalSettings {
@@ -109,6 +110,7 @@ export async function getStaticProps({ params, locale }) {
 }
 
 export async function getStaticPaths({ locales }) {
+  
   const apolloClient = getApolloClient();
 
   const data = await apolloClient.query({

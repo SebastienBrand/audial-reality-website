@@ -33,64 +33,73 @@ export default function Home({ page, posts }) {
 
 
 export async function getStaticProps({ locale }) {
-  const apolloClient = getApolloClient();
 
-  const language = locale.toUpperCase();
-
-  const data = await apolloClient.query({
-    query: gql`
-      query posts($language: LanguageCodeFilterEnum!) {
-        posts(where: { language: $language }) {
-          edges {
-            node {
-              id
-              excerpt
-              title
-              slug
-              featuredImage {
-                node {
-                  id
-                  sourceUrl
-                  altText
+  try {
+    const apolloClient = getApolloClient();
+    
+    const language = locale.toUpperCase();
+    
+    
+    
+    const data = await apolloClient.query({
+      query: gql`
+        query posts($language: LanguageCodeFilterEnum!) {
+          posts(where: { language: $language }) {
+            edges {
+              node {
+                id
+                excerpt
+                title
+                slug
+                featuredImage {
+                  node {
+                    id
+                    sourceUrl
+                    altText
+                  }
                 }
-              }
-              language {
-                code
-                locale
+                language {
+                  code
+                  locale
+                }
               }
             }
           }
+          generalSettings {
+            title
+            description
+          }
         }
-        generalSettings {
-          title
-          description
-        }
-      }
-    `,
-    variables: {
-      language,
-    },
-  });
-
-  let posts = data?.data.posts.edges
-
-    .map(({ node }) => node)
-    .map((post) => {
-      return {
-        ...post,
+      `,
+      variables: {
         language,
-        path: `/posts/${post.slug}`,
-      };
+      },
     });
 
-  const page = {
-    ...data?.data.generalSettings,
-  };
 
-  return {
-    props: {
-      page,
-      posts,
-    },
-  };
+    let posts = data?.data.posts.edges
+
+      .map(({ node }) => node)
+      .map((post) => {
+        return {
+          ...post,
+          language,
+          path: `/posts/${post.slug}`,
+        };
+      });
+
+    const page = {
+      ...data?.data.generalSettings,
+    };
+
+    return {
+      props: {
+        page,
+        posts,
+      },
+    };
+  }
+  catch {
+    return { props: { } }
+  }
 }
