@@ -31,7 +31,8 @@ export default function Home({ page, posts }) {
 
 
 export async function getStaticProps({ locale }) {
-
+  return { props: { } }
+/*
   try {
     const apolloClient = getApolloClient();
     
@@ -99,5 +100,5 @@ export async function getStaticProps({ locale }) {
   }
   catch {
     return { props: { } }
-  }
+  }*/
 }
