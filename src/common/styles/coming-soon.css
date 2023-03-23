@@ -21,22 +21,25 @@
 }
 
 .uc__details {
-    flex-basis: 50%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     padding: 0 1.5rem;
     align-items: flex-start;
     justify-content: center;
     background-color: #191919;
+    z-index: 999;
 }
 
 .uc__art {
-    flex-basis: 50%;
+    flex-basis: 37.5%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #191919;
     position: relative;
+    z-index: 0;
+    margin-right: 35px;
     
 }
 
@@ -101,7 +104,10 @@ form {
     border-radius: 3px;
     /*box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);*/
     box-shadow: rgb(0 0 0) 0px 0px 8px 1px;
+    width: 100%;
 }
+
+
 
 .uc__subscribe h3 {
     font-weight: normal;
@@ -202,7 +208,6 @@ form {
 
 .res-msg {
     padding-top: 5px;
-    font-size: 11px;
     font-style: italic;
     width: 100%;
     display: flex;
@@ -217,12 +222,16 @@ form {
     .uc__details {
         padding: 0 4rem !important;
     }
+
+ 
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
     .uc__details {
         padding: 0 4rem !important;
     }
+
+
 
     
 }
@@ -231,18 +240,36 @@ form {
     .uc__details {
         padding: 0 2rem !important;
     }
-}
+    
+    .uc__wrapper {
+        flex-flow: column !important;
+    }
 
-@media all and (min-width: 480px) and (max-width: 768px) { 
-    .uc__details {
-        padding: 0 1.5rem !important;
+    .uc__art {
+        margin-right: 0px !important;
+        display: none;
     }
 
 }
 
-@media all and (max-width: 480px) { 
+@media all and (max-width: 768px) { 
+    .uc__details {
+        padding: 0 1.5rem !important;
+    }
+
+    .input-top {
+        flex-flow: column !important;
+    }
+
     
-    
+    .uc__art {
+        margin-right: 0px !important;
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 480px) {  
 
 }
 
@@ -265,10 +292,6 @@ form {
 @media screen and (orientation:landscape) { 
     /* Landscape styles here */ 
     
-    
-    .uc__wrapper {
-        flex-flow: row;
-    }
 
     .uc__art img {
         width: 95%;

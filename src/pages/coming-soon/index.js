@@ -14,42 +14,23 @@ class ComingSoonPage extends React.Component {
 
 
   requestAddToEmailList = async (payload) => {
-    //const fetchRoute = `http://localhost:8000/promotion/coming-soon`;
-    const fetchRoute = `https://groop-fit-web-app.herokuapp.com/promotion/coming-soon`;
-    try {
-        const serverResponse = await fetch(fetchRoute, {
-            method: 'POST',
-            mode: 'cors',
-            headers: { 
-                 'Content-Type': 'application/json',
-             },
-            credentials: 'include',
-            body: JSON.stringify(payload)
-        });
+    const fetchRoute = "/api/promotion/coming-soon";
+    const response = await fetch(fetchRoute, {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    });
+    
+    const data = await response.json();
 
-        if( !serverResponse.ok ){
-            if( serverResponse.status === 403 ){
-                /*--------------------------------------------------------------------/
-                /  Task: Put Code here to Handle the Failure of this request!         /
-                /--------------------------------------------------------------------*/
-            } else if ( serverResponse.status === 409 ||  serverResponse.status ===  401) {
-                return await serverResponse.json()
-            } else {
-                throw new Error(`${serverResponse.status} ${serverResponse.statusText}`) 
-                return {}
-            }
-        } 
-        return await serverResponse.json()
-    } catch (err) {
-        return {}
-    }
+    if( data.status >= 400 ){
+       return { msg: `Error ${data.status}: ${data.title}`, color: "red"  }
+    } else {
+        return { msg: "You have been added to the email list", color: "green"  }
+    }    
 } 
 
   handleSubmit = async (e) => {
-    console.log("We are Working")
-    console.log("Email: ", e.target.email.value)
-    console.log("First: ", e.target.given_name.value)
-    console.log("Last: ", e.target.family_name.value)
     e.preventDefault();
 
     let response = await this.requestAddToEmailList({
@@ -59,11 +40,8 @@ class ComingSoonPage extends React.Component {
     })
 
     if( response.msg ){
-        this.setState({ msg: response.msg, color: response.err ? "red" : "green" })
+        this.setState({ msg: response.msg, color: response.color })
     } 
-
-    console.log( response )
-
   }
  
   render() {
@@ -92,7 +70,7 @@ class ComingSoonPage extends React.Component {
                                 <input type="submit" className="submit-small" value=""/>
                             </form>
                         </div>
-                        <div className="res-msg" style={{color: this.state.color}}>{this.state.msg}</div>
+                        <p className="res-msg" style={{color: this.state.color}}>{this.state.msg}</p>
                     </div>
                 </div>
                 <div className="uc__art">
