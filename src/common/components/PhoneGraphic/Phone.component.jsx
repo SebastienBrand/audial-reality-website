@@ -1,4 +1,5 @@
 import styles from './Phone.module.css'
+import PNG from '@/images/phone_soundscape.png'
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,7 +10,9 @@ export default function SmartPhone(props){
         <div className={`${styles['iphone-wrapper']}`}>
             <div className={`${styles['iphone-x']}`}>
                 <div className={`${styles['bazzel']}`}>
-                    <div className={`${styles['screen']}`}></div>
+                    <div className={`${styles['screen']}`}>
+                        <Image className={`${styles['app']}`}src={PNG} alt="soundscape_app"/>
+                    </div>
                 </div>
                 <div className={`${styles['line']}`}></div>
                 <div className={`${styles['header']}`}>
