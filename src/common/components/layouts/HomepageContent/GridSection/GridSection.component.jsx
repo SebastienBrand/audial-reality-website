@@ -17,10 +17,10 @@ export default function GridSection( props ){
         <div className="webpage-section-container align-center">
             <h3>Rhoncus aenean vel elit scelerisque mauris</h3>
             <div className={`${styles['grid']}`} >
-                {temp_array.map(( element ) => {
+                {temp_array.map(( element, index ) => {
                     return (
-                        <div className={`flex flex-center flow-col ${styles['grid-box']}`} >
-                            <div className={`${styles['icon']} icon-bg-${element.color}`}>
+                        <div className={`flex flex-center flow-col ${styles['grid-box']}`} key={`grid-box-${index}`} >
+                            <div className={`${styles['icon']} icon-bg-${element.color}`} key={`icon-${index}`}>
                                 <FaQuestion size={'1.75em'} color={'white'}/>
                             </div>
 

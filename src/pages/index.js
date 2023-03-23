@@ -17,8 +17,6 @@ import { getApolloClient } from "../lib/apollo-client";
 
 
 export default function Home({ page, posts }) {
-  console.log(posts)
-
   return (
       <WebpageWrapper>
         <HeroSection />
