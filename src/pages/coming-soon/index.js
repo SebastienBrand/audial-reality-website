@@ -48,13 +48,14 @@ class ComingSoonPage extends React.Component {
     return(
             <div className="uc__wrapper">
                 <div className="uc__details">
-                    <h1 className="title">Coming Soon!</h1>
+                    <h1 className="title">Join Our Email List!</h1>
                     <h3 className="intro">
-                        We are working hard to give you healthy lifestyle growth opportunities through group fitness.   
+                       We are working hard to give you a new experience to aid in navigating the world!   
                     </h3>
                     <p className="uc__description">
-                        Our Site is almost ready, so are you ready for the most user-friendly group fitness tool? 
-                        Be one of the first to experience it by entering your email and name below. As we will notify you as soon as GroopFit goes live.    
+                        Our Site is almost ready, so are you ready for the most user-friendly navigation aid tool? 
+                        Be one of the first to experience it by entering your email and name below. As we will notify you as soon as Soundscape has updates
+                        and goes live.  
                         We are in this together, our community striving to reach our goals one challenge at a time! 
                     </p>
                     <div className="uc__subscribe">
