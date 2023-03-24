@@ -5,6 +5,7 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import Link from 'next/link';
 import styles from "./DropDownMenu.module.css";
 
+
 export default function DropDownMenu() {
 
     //Languages (check next.config.js)
@@ -13,7 +14,9 @@ export default function DropDownMenu() {
 
     return <div>
     <DropdownMenu.Root>
-        <DropdownMenu.Trigger  className={styles['trigger']} >Languages</DropdownMenu.Trigger>
+        <DropdownMenu.Trigger  className={styles['trigger']} >
+            Languages
+        </DropdownMenu.Trigger>
 
         <DropdownMenu.Content className={styles['content']}>
             <DropdownMenu.Item className={styles['item']}>
