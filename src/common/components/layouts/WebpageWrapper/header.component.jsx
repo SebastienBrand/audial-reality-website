@@ -6,7 +6,7 @@ import Logo from "@/AR-Logo"
 import Image from 'next/image';
 import Link from 'next/link';
 
-
+import DropDownMenu from 'src/common/components/DropDownMenu/DropDownMenu'
 
 
 const HeaderComponent = (props) => {
@@ -34,6 +34,7 @@ const HeaderComponent = (props) => {
 
     return (
         <header className="flex flex-row">
+
             <div className="flex flex-center fit-content header-logo-container"> 
                 <Image loading="lazy" src={Logo} alt="Audio Reality Logo" /> 
             </div>
@@ -49,6 +50,11 @@ const HeaderComponent = (props) => {
                         </Link>
                     );
                })} 
+
+            <div>
+            <DropDownMenu/>
+            </div>
+
                <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={sign_up_button.link}>
                     {sign_up_button.title}
                </Link>
@@ -56,6 +62,4 @@ const HeaderComponent = (props) => {
         </header>
     );
 }
-
-
 export default HeaderComponent;

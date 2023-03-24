@@ -33,9 +33,12 @@ export default function Home({ page, posts }) {
 
 
 export async function getStaticProps({ locale }) {
+
+try{
   const apolloClient = getApolloClient();
 
   const language = locale.toUpperCase();
+
 
   const data = await apolloClient.query({
     query: gql`
@@ -93,4 +96,11 @@ export async function getStaticProps({ locale }) {
       posts,
     },
   };
+}
+
+catch{
+
+  return {props: {}}
+}
+ 
 }

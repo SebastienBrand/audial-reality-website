@@ -1,0 +1,33 @@
+/*Styling for Drop Down Menu*/
+.trigger{
+
+    font-size: var(--header-text-size);
+    font-weight: bolder;
+    color: var(--primary-text-color);
+    background-color: #1e1e1e; 
+    padding-inline: 10px;
+}
+
+.trigger:hover{
+
+    color: var(--primary-text-highlight-color);
+}
+
+.content{
+
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px 0 #1e1e1e;
+    border-radius: 6px;
+}
+
+.item{
+    
+    padding: 5px 10px;
+    background-color: #1e1e1e;
+    list-style-type: none;
+}
+
+.item:focus{
+
+    background-color: rgb(22 22 22);
+}
