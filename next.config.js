@@ -5,7 +5,7 @@ const nextConfig = {
     domains : ['soundscape-website.local', 'localhost' ] // <== Domain name
   },
   i18n: {
-    locales: ["en", "es"],
+    locales: ["en", "es", "fr"],
     defaultLocale: "en",
   },
 }

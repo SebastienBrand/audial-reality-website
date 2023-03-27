@@ -14,7 +14,7 @@ export default function DropDownMenu() {
 
     return <div>
     <DropdownMenu.Root>
-        <DropdownMenu.Trigger  className={styles['trigger']} >
+        <DropdownMenu.Trigger  className={`${styles['trigger']}`} >
             Languages
         </DropdownMenu.Trigger>
 

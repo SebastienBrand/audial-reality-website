@@ -1,18 +1,18 @@
 /*Styling for Drop Down Menu*/
 .trigger{
-
     gap: 30px;
     background-color: #1e1e1e; 
     font-weight: bolder;
     height: 100%;
     width: fit-content;
     padding-inline: 10px;
+    padding: 22px;
     text-decoration: none !important;
     font-size: var(--header-text-size);
     color: var(--primary-text-color);
-    text-decoration: none !important;
     text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.25);
     border: none;
+
 
 }
 
@@ -31,10 +31,13 @@
 }
 
 .item{
-    
-    padding: 5px 10px;
+
     background-color: #1e1e1e;
     list-style-type: none;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .item:focus{
