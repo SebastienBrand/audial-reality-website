@@ -12,24 +12,26 @@ class ComingSoonPage extends React.Component {
     }
   }
 
-
   requestAddToEmailList = async (payload) => {
-    const fetchRoute = "/api/promotion/coming-soon";
-    const response = await fetch(fetchRoute, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-    });
     
-    const data = await response.json();
-
-    if( data.status >= 400 ){
-       return { msg: `Error ${data.status}: ${data.title}`, color: "red"  }
+    if (payload.special_req && payload.special_req.trim() !== ''){
+        return  { msg: `Error: We are unable to process your request at this time.`, color: "yellow"  };
     } else {
-        return { msg: "You have been added to the email list", color: "green"  }
-    }    
+        const fetchRoute = "/api/promotion/coming-soon";
+        const response = await fetch(fetchRoute, {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+            
+        const data = await response.json();
+        if( data.status >= 400){
+            return { msg: `Error ${data.status}: ${data.title}`, color: "red"  }
+        } else {
+            return { msg: "You have been added to the email list", color: "green"  }
+        }    
+    }
 } 
-
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,6 +39,7 @@ class ComingSoonPage extends React.Component {
         email: e.target.email.value,
         firstName: e.target.given_name.value,
         lastName: e.target.family_name.value,
+        special_req: e.target.special_req.value,
     })
 
     if( response.msg ){
@@ -65,9 +68,11 @@ class ComingSoonPage extends React.Component {
                                     <input type="text" className="fn-input" name="given_name" placeholder="First Name" required />
                                     <input type="text"  className="ln-input" name="family_name" placeholder="Last Name" required />
                                 </div>
-                                <input type="email" className="email" name="email" placeholder="Email Address" required/>
-                                <input type="submit" className="submit" value="Get Notified" />
+                                <input type="email" className="email" name="email" placeholder="Email Address"required/>
+                                <input type="text" className="special_req" name="special_req" placeholder=""/>
+                                <input type="submit" className="submit" value="Get Notified"/>
                                 <input type="submit" className="submit-small" value=""/>
+
                             </form>
                         </div>
                         <p className="res-msg" style={{color: this.state.color}}>{this.state.msg}</p>
