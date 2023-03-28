@@ -28,17 +28,16 @@ export default function Post({ post, site }) {
           <div className="post-banner" > 
             <Image loading="lazy" src={Banner} alt="Post-Banner"/>
             <div className="post-title-box">
-              <h1 dangerouslySetInnerHTML={{ __html: post.title, }} />
+              <h1 dangerouslySetInnerHTML={{ __html: post.translation.title, }} />
               <div className="post-title-box-below">
                 <div className="post-details">
-                  <span><BsPerson size={'1.25em'} color={'white'}/>&nbsp;&nbsp;{post.author.node.firstName + " " + post.author.node.lastName}</span>
                   <span><BsCalendar size={'0.95em'} color={'white'}/>&nbsp;&nbsp;{"March 01 2023"}</span>
                 </div>
               </div>
             </div>
           </div>
           {/* ---------------------------------------------------------------------------------------------------- */}
-          { post.content && <div className="post-content-wrapper" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content), }} /> }
+          { post.translation.content && <div className="post-content-wrapper" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.translation.content), }} /> }
           {/* ---------------------------------------------------------------------------------------------------- */}
           <Link href="/" style={{ margin: "15px auto 50px auto" }}> Back to the Home Page </Link> 
         </div>
@@ -63,15 +62,6 @@ export async function getStaticProps({ params, locale }) {
           content
           title
           slug
-          author {
-            node {
-              id
-              name
-              firstName
-              lastName
-            }
-          }
-          date
           translation(language: $language) {
             id
             slug
@@ -93,22 +83,22 @@ export async function getStaticProps({ params, locale }) {
 
   let post = data?.data.postBy;
 
-  //const site = {
-  //  ...data?.data.generalSettings,
-  //};
+  const site = {
+    ...data?.data.generalSettings,
+  };
 
   return {
     props: {
       post,
       language,
       path: `/posts/${post.slug}`,
-      //site,
+      site,
     },
     revalidate: 10,
   };
 }
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths({ locales}) {
   const apolloClient = getApolloClient();
 
   const data = await apolloClient.query({
@@ -128,6 +118,7 @@ export async function getStaticPaths({ locales }) {
   });
 
   const posts = data?.data.posts.edges.map(({ node }) => node);
+
   const paths = posts.map(({ slug }) => {
     return {
       params: {
@@ -136,6 +127,7 @@ export async function getStaticPaths({ locales }) {
     };
   });
 
+  
   return {
     paths: [
       ...paths,
