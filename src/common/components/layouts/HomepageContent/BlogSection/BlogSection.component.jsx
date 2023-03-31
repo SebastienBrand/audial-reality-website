@@ -5,7 +5,6 @@ import Temp_Post_Picture from '@/images/temp-post-pic.jpg';
 
 
 
-
 function PostShowcase(props){
   
     return (
