@@ -134,10 +134,6 @@ form {
     border: 1px solid lightgrey;
 }
 
-/* .uc__form input:valid {
-
-    background-color: #ffe8cc; 
-} */
 
 .uc__form .email {
     width: 100%;
@@ -414,4 +410,60 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* iPad Landscape */
 @media screen and (min-device-width: 481px) and (orientation:landscape) {
+}
+
+/* Thank you page CSS */
+.thank-you-page {
+    background-image: url("../../assets/images/thank-you.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    /* background-color: blue; */
+    /* position: fixed; */
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 100vh;
+    width: auto;
+}
+
+.top {
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    width: 100%;
+    margin: 1em auto;
+}
+
+.top p {
+    text-align: center !important;
+    color:white;
+}
+.top p:nth-child(1){
+    font-size: var(--large-text);
+}
+/* .top p:nth-child(2){
+    
+} */
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.bottom p {
+    text-align: center;
+    color: white;
+    
+}
+.bottom p:nth-child(1) {
+    font-size: var(--larger-text);
+    margin-bottom: 10px;
 }
