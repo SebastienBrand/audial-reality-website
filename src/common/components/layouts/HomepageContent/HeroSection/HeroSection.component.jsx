@@ -57,11 +57,11 @@ export default function Hero( props ){
     */
      return ( 
         <div className={`flex flow-col ${styles['hero-wrapper']}`}>
-             <span className={`${styles['hero-background-text']}`}>{`${HomepageText.HeroSection.span}`}</span>
-             <h2>{`${HomepageText.HeroSection.h2}`}</h2>
-             <h1>{`${HomepageText.HeroSection.h1}`}</h1>
+             <span className={`${styles['hero-background-text']}`}>{HomepageText.HeroSection.span}</span>
+             <h2>{HomepageText.HeroSection.h2}</h2>
+             <h1>{HomepageText.HeroSection.h1}</h1>
              <Image src={Image1} alt="" />
-             <h5>{`${HomepageText.HeroSection.h5}`}</h5>
+             <h5>{HomepageText.HeroSection.h5}</h5>
             <ProgressPath />
             <div className={`flex flow-row justify-sb ${styles['continue-scrolling-section']}`}>
                 <BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>

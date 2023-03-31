@@ -1,4 +1,13 @@
-import { currentYear, pageLink } from './_Constants.js'
+/**
+ * Implementation examples:
+ * import { Homepage as HomepageText} from '@/text/data.js';
+ * <h2>{HomepageText.HeroSection.h2}</h2>
+ * 
+ * Using arrays for elements with same name within a section
+ * example: <button>{HomepageText.SupportSection.button[0]}</button>
+ */
+
+import { currentYear, siteMainMenu } from './_Constants.js'
 
 export const Homepage = {
     "PostShowcase": {
@@ -28,7 +37,8 @@ export const Homepage = {
     "SupportSection": {
         "h3": "Rhoncus aenean vel elit",
         "h5": "Ipsum dolor sit amet consectetur adipiscing",
-        "p": "Facilisis mauris sit amet massa. Vitae semper quis lectus nulla at volutpat. Nibh venenatis cras sed felis eget velit. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Vitae nunc sed velit dignissim sodales ut eu sem integer. Amet risus nullam eget felis eget nunc lobortis mattis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Odio ut sem nulla pharetra. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Duis ultricies lacus sed turpis tincidunt id."
+        "p": "Facilisis mauris sit amet massa. Vitae semper quis lectus nulla at volutpat. Nibh venenatis cras sed felis eget velit. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Vitae nunc sed velit dignissim sodales ut eu sem integer. Amet risus nullam eget felis eget nunc lobortis mattis. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Odio ut sem nulla pharetra. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. Duis ultricies lacus sed turpis tincidunt id.",
+        "button": ["Lorem Ipsum Dalor Amut", "Lorem Ipsum Dalor Amut"]
     }
 
 };
@@ -45,20 +55,19 @@ export const Footer = {
             "button": "Join Now"
         },
         "ThirdSection": {
-            "h4": "QuickLinks"
+            "h4": "QuickLinks",
+            "QuickLinks": siteMainMenu
         }
     },
     "Bottom": {
-        "TermCondition": "&nbsp; Terms & Conditions  &nbsp;",
-        "PrivacyPolicy": "&nbsp; Privacy Policy &nbsp;",
-        "BeforeYear": "&nbsp; ",
+        "TermCondition": "Terms & Conditions",
+        "PrivacyPolicy": "Privacy Policy",
         "Year": currentYear,
-        "AfterYear": " Soundscape ",
+        "SoundscapeText": " Soundscape ",
         "An": "An ",
         "RCOS": " RCOS ",
         "Project": " Project"
-    },
-    "QuickLink": pageLink
+    }
 }
 
 export const Toolbar = {
