@@ -274,7 +274,7 @@ form {
 }
 
 @media all and (max-width: 480px) {  
-
+    
 }
 
 
@@ -396,7 +396,15 @@ only screen and (min-device-pixel-ratio: 1.5) {
         margin: 0px 20px 0px 0px !important;
         border-radius: 0px 10px 15px 0px;
     }
-    
+    .bottom { 
+        margin-bottom: 100px !important; 
+    }
+    .bottom h2 {
+        font-size: var(--large-text) !important;
+    }
+    .bottom p {
+        font-size: var(--small-text) !important;
+    }
 } 
 
 /* iPhone Landscape */
@@ -412,41 +420,29 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media screen and (min-device-width: 481px) and (orientation:landscape) {
 }
 
+
 /* Thank you page CSS */
 .thank-you-page {
-    background-image: url("../../assets/images/thank-you.svg");
-    background-size: auto 100%;
+    background-image: url("../../assets/images/thank-you.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-
-    /* background-color: blue; */
-    /* position: fixed; */
-    /* display: flex; */
-    /* justify-content: center; */
     height: 100vh;
     width: auto;
 }
 
 .top {
-    position: absolute !important;
-    display: flex !important;
+    position: absolute;
+    display: flex;
     flex-direction: column;
-    justify-content: center !important;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin: 1em auto;
 }
-
 .top p {
-    text-align: center !important;
     color:white;
-}
-.top p:nth-child(1){
-    font-size: var(--large-text);
-}
-/* .top p:nth-child(2){
-    
-} */
+} 
 
 .bottom {
     position: absolute;
@@ -455,15 +451,16 @@ only screen and (min-device-pixel-ratio: 1.5) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    margin-bottom: 100px;
+    width: 100vw;
+    margin-bottom: 200px; 
+    text-align: center;
+}
+.bottom h2 {
+    font-size: var(--largest-text);
+    margin-bottom: 25px;
 }
 .bottom p {
-    text-align: center;
+    text-align: center;    
     color: white;
-    
-}
-.bottom p:nth-child(1) {
-    font-size: var(--larger-text);
-    margin-bottom: 10px;
+    font-size: var(--medium-text);
 }

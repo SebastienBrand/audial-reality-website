@@ -10,10 +10,10 @@ export default function comingSoonComplete() {
             
             
             <div className="bottom">
-                <p>You're in, thanks!</p>
+                <h2>You're in, thanks!</h2>
                 <p>Thanks for subscribing - You will recieve product <br />
                     updates directly in your inbox.
-                </p>
+                </p> 
             </div>
         </div>
     );
