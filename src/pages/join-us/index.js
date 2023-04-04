@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import SVG from '@/images/pedestrian_crossing.svg'
 
+
 export default function JoinUsPage() {
     /* TASK: When text is autofilled BG of input turns white when it needs to be transparent */ 
     /* TASK: DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */
@@ -30,7 +31,9 @@ export default function JoinUsPage() {
             <p className="join-us-info-box" >
                 We will send you updates on the project and application as we continue our endeavors.
             </p>
-            <button className="donate-button">Donate to Support Soundscape</button>
+            <button className="donate-button">
+                <a className="donate-button" href = "https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1">Donate to Support Soundscape</a>
+            </button>
             <div className="bg-container" />
         </div>
     )
