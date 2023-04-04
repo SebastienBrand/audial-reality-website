@@ -1,0 +1,25 @@
+{
+ "Images": [
+    
+    {"Name": "AR-Logo", "Img": "/images/AR-Logo.svg", "Alt": "AR-Logo"},
+    {"Name": "battery-3d", "Img": "/images/battery-3d.png", "Alt": "battery-3d"},
+    {"Name": "beacon-3d", "Img": "/images/beacon-3d.png", "Alt": "beacon-3d"},
+    {"Name": "google-logo", "Img": "/images/google-logo.png", "Alt": "google-logo"},
+    {"Name": "google", "Img": "/images/google.svg", "Alt": "google"},
+    {"Name": "headphone-3d", "Img": "/images/headphone-3d.png", "Alt": "headphone-3d"},
+    {"Name": "join-us-bg", "Img": "/images/join-us-bg.svg", "Alt": "join-us-bg"},
+    {"Name": "location", "Img": "/images/location.png", "Alt": "location"},
+    {"Name": "pedestrian_crossing", "Img": "/images/pedestrian_crossing.svg", "Alt": "pedestrian_crossing"},
+    {"Name": "phone_soundscape", "Img": "/images/phone_soundscape.png", "Alt": "phone_soundscape"},
+    {"Name": "post-banner-two", "Img": "/images/post-banner-two.png", "Alt": "post-banner-two"},
+    {"Name": "post-banner", "Img": "/images/post-banner.jpg", "Alt": "post-banner"},
+    {"Name": "sts-logo", "Img": "/images/sts-logo.svg", "Alt": "sts-logo"},
+    {"Name": "temp-post-pic-two", "Img": "/images/temp-post-pic-two.jpg", "Alt": "temp-post-pic-two"},
+    {"Name": "temp-post-pic", "Img": "/images/temp-post-pic.jpg", "Alt": "temp-post-pic"},
+    {"Name": "thank-you1", "Img": "/images/thank-you.png", "Alt": "thank-you1"},
+    {"Name": "thank-you2", "Img": "/images/thank-you.svg", "Alt": "thank-you2"},
+    {"Name": "wp-post-image", "Img": "/images/wp-post-image.jpg", "Alt": "wp-post-image"},
+    {"Name": "wp-post-post", "Img": "/images/wp-post-post.svg", "Alt": "wp-post-post"}
+    
+    ]
+}
