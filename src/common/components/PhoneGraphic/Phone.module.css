@@ -37,7 +37,7 @@
     width: 342px;
     z-index: 1;
   }
-  .iphone-x .screen {
+  .iphone-x .screen .app {
     background: #1c1c1c;
     background-position: center center;
     background-size: cover;

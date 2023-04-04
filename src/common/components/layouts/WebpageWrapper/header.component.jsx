@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 import DropDownMenu from 'src/common/components/DropDownMenu/DropDownMenu'
 
-
 const HeaderComponent = (props) => {
     let temp_array = [{
         title: 'Lorem',
@@ -57,6 +56,7 @@ const HeaderComponent = (props) => {
                <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={sign_up_button.link}>
                     {sign_up_button.title}
                </Link>
+
             </div>
         </header>
     );

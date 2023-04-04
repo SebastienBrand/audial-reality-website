@@ -71,7 +71,7 @@ export default function FeaturesSection( props ){
 
 
     useEffect(() => {
-        console.log(currentItem)
+
     }, [])
 
     

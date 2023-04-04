@@ -7,22 +7,6 @@
 
 /* Header CSS below */
 
-.header-link-container a:hover {
-    border-bottom: 2.5px solid var(--primary-text-highlight-color);
-    
-    z-index: 9999999;
-    color: var(--primary-text-highlight-color);
-
-}
-
-.header-signup-button {
-    background-color: rgb(73, 154, 48);
-    color: black;
-    border-radius: 25px 25px 25px 25px;
-    transform: none;
-    animation: none;
-    text-shadow: none;
-}
 
 .header-link-container {
     gap: 30px;
@@ -35,13 +19,61 @@
     width: fit-content;
     padding-inline: 10px;
     text-decoration: none !important;
-}
-
-.header-link-container a {
     font-size: var(--header-text-size);
     color: var(--primary-text-color);
-    text-decoration: none !important;
     text-shadow: 2px 2px 2px rgba(44, 44, 44, 0.25);
+}
+
+.header-link-container a:hover {
+    border-bottom: 2.5px solid var(--primary-text-highlight-color);
+    color: var(--primary-text-highlight-color);
+    z-index: 9999999;
+}
+
+/* Sign up-button with unique animation */
+/* .header-signup-button svg path {
+    transition: all 0.3s ease;
+}
+.header-signup-button:hover{
+    border-bottom: none !important;
+    color: var(--primary-text-color) !important;
+}
+.header-signup-button:hover svg path {
+    color: var(--primary-text-color);
+}
+
+.header-signup-button:after {
+    left: -300px;
+    transform: skewX(-25px);
+    background: linear-gradient(to right, transparent, transparent, rgb(255, 255, 255, 0.25), transparent);
+}
+
+.header-signup-button:hover:after{
+    animation: shine .8s ease;
+} */
+.header-signup-button {
+    /* display: inline-block; */
+    /* background-color: #008CBA; */
+    color: #fff;
+    text-align: center;
+    /* font-size: 16px; */
+    /* padding: 5px 5px; */
+    border-radius: 4px;
+    border: none;
+    /* cursor: pointer; */
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+.header-signup-button:hover {
+    /* background-color: #00698c; */
+    border-bottom: none !important;
+    color: var(--primary-text-color) !important;
+}
+
+@keyframes shine {
+    to {
+        left: 400px;
+    }
 }
 
 
