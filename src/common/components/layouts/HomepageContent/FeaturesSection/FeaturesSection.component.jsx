@@ -3,10 +3,6 @@ import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Headphone from '@/images/headphone-3d.png';
-import Beacon from '@/images/beacon-3d.png';
-import Battery from '@/images/battery-3d.png';
-
 import { FaQuestion } from "react-icons/fa";
 import { PhoneGraphic } from '@/components/PhoneGraphic/__index.js'
 
@@ -16,25 +12,7 @@ import { BsChevronDoubleDown } from 'react-icons/bs'
 
 import { Homepage as HomepageText} from '@/text/data.js';
 
-let my_array = [ 
-    {   title: 'Lorem Ipsum 1',
-        image: (  <Image loading="lazy" src={ Headphone } alt=""></Image>)
-    }, 
-    {   title: 'Lorem Ipsum 2',
-        image: (  <Image loading="lazy" src={ Beacon } alt=""></Image>) 
-    },  
-    {   title: 'Lorem Ipsum 3',
-        image: (  <Image loading="lazy" src={ Battery } alt=""></Image>) 
-    }, 
-    {   title: 'Lorem Ipsum 4',
-        image: (  <Image loading="lazy" src={ Headphone } alt=""></Image>) 
-    }, 
-    {   title: 'Lorem Ipsum 5',
-        image: (  <Image loading="lazy" src={ Beacon } alt=""></Image>) 
-    },    
-    {   title: 'Lorem Ipsum 6',
-        image: (  <Image loading="lazy" src={ Battery } alt=""></Image>) 
-    }]
+let my_array = HomepageText.FeaturesSection.items;
 
 export default function FeaturesSection( props ){
     const [prevItem, setPrevItem] = useState(0)
@@ -92,15 +70,15 @@ export default function FeaturesSection( props ){
                 <div className={`flex flow-row flex-center ${styles['features-slider-container']}`} >
 
                     <div className={`flex flow-col flex-center ${styles['features-slider-item']}`} >
-                        { my_array[prevItem].image}
+                        { (  <Image loading="lazy" src={my_array[prevItem].image} alt=""></Image>) }
                         <h5>{ my_array[prevItem].title}</h5>
                     </div>
                     <div className={`flex flow-col flex-center ${styles['features-slider-item']}`} >
-                        { my_array[currentItem].image}
+                        { (  <Image loading="lazy" src={my_array[currentItem].image} alt=""></Image>) }
                         <h5>{ my_array[currentItem].title}</h5>
                     </div>
                     <div className={`flex flow-col flex-center ${styles['features-slider-item']}`} >
-                         { my_array[nextItem].image}
+                         { (  <Image loading="lazy" src={my_array[nextItem].image} alt=""></Image>) }
                         <h5>{ my_array[nextItem].title}</h5>
                     </div>
              
