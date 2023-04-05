@@ -62,8 +62,10 @@ export const Header = {
         link: 'https://google.com'
     }],
 
-    sign_up_button: { title: 'Sign Up', link: 'https://google.com' },
-    join_now_button: { title: 'Join Now', link: 'https://google.com' }
+    join_us_button: {
+        title: 'Join Us',
+        link: 'https://google.com'
+    }
 };
 
 export const Footer = {

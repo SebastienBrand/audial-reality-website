@@ -25,14 +25,9 @@ const HeaderComponent = (props) => {
                         </Link>
                     );
                 })}
-                <div className={`flex flex-center`}>
-                    <Link className={`flex flex-center ${styles['header-signup-button']}`} href={HeaderText.sign_up_button.link}>
-                        {HeaderText.sign_up_button.title}
-                    </Link>|
-                    <Link className={`flex flex-center ${styles['header-signup-button']}`} href={HeaderText.join_now_button.link}>
-                        {HeaderText.join_now_button.title}
-                    </Link>
-                </div>
+                <Link className={`flex flex-center ${styles['header-signup-button']}`} href={HeaderText.join_us_button.link}>
+                    {HeaderText.join_us_button.title}
+                </Link>
             </div>
         </header>
     );
