@@ -1,13 +1,23 @@
 import Image from 'next/image'
 import SVG from '@/images/pedestrian_crossing.svg'
-
+import { useEffect } from 'react'
 
 export default function JoinUsPage() {
-    /* TASK: When text is autofilled BG of input turns white when it needs to be transparent */ 
+    /* TASK: (DONE) When text is autofilled BG of input turns white when it needs to be transparent */ 
     /* TASK: DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */
     /* TASK: BG NEEDS TO CHANGE AT PHONE SIZE (MEDIA QUERY ALREADY IN CSS FILE) */
     /* TASK: UI and font needs to scale at very small screen size (sub 400 ish px)  */
     /* TASK: Add functinality from coming soon page to here api call, honey trap etc etc. */
+    useEffect(() => {
+        const inputFields = document.querySelectorAll('.join-us__form input');
+        inputFields.forEach((field) => {
+            const style = window.getComputedStyle(field);
+            field.style.setProperty('-webkit-text-fill-color','white');
+            field.addEventListener('focus', () => {
+                field.style.setProperty('caret-color','white');
+            });
+        });
+    }, []);
 
     return (
         <div className="join-us-page-wrapper" >
@@ -25,7 +35,7 @@ export default function JoinUsPage() {
                         <input type="text"  className="ln-input" name="family_name" placeholder="Last Name" required />
                         <input type="email" className="join-us-email" name="email" placeholder="Email Address" required/>
                     </div>
-                    <input type="submit" className="submit" value="Join Today" />
+                    <input type="submit" className="submit" value="Join Today"/>
                 </form>
             </div>
             <p className="join-us-info-box" >
