@@ -15,7 +15,7 @@ export const siteMainMenu = [
     {name: "Site Page 6", link: "#"},
     {name: "Site Page 7", link: "#"},
     {name: "Site Page 8", link: "#"},
-    {name: "Site Page 9", link: "#" }
+    {name: "Site Page 9", link: "#"}
 ];
 
 // images are imported
