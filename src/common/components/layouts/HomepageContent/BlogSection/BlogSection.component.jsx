@@ -3,8 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Temp_Post_Picture from '@/images/temp-post-pic.jpg';
 
-
-
+import { Homepage as HomepageText} from '@/text/data.js';
 
 function PostShowcase(props){
   
@@ -13,7 +12,7 @@ function PostShowcase(props){
             <Image src={props.data.featuredImage?.node.sourceUrl} alt={props.data.featuredImage?.node.altText} width={1000} height={500} />
             <h5 dangerouslySetInnerHTML={{ __html: props.data.title, }} />
             <div dangerouslySetInnerHTML={{ __html: props.data.excerpt, }} />
-            <a href={props.data.path}> Continue Reading </a>
+            <a href={props.data.path}>{HomepageText.PostShowcase.a}</a>
         </div>
     )
 }
@@ -27,8 +26,8 @@ export default function BlogSection(props){
 
     return (
         <div className={`flex flow-col webpage-section-container ${styles['blog-top-margin']}`} >
-            <h3 className={`text-align-center`}>Rhoncus aenean vel elit</h3>
-            <h5 className={`text-align-center`}>Ipsum dolor sit amet consectetur adipiscing</h5>
+            <h3 className={`text-align-center`}>{HomepageText.BlogSection.h3}</h3>
+            <h5 className={`text-align-center`}>{HomepageText.BlogSection.h5}</h5>
             <div className={`${styles['blog-showcase-wrapper']}`}>
                 {props.allPosts && props.allPosts.length > 0 && props.allPosts.map(( element, index ) => {
                     return (
