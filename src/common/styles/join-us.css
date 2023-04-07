@@ -123,31 +123,30 @@
     z-index: 999999;
 }
 
-.donate-button, .donate-button a{
+.donate-button {
     z-index: 999999;
 
     text-decoration: none;
 
-    background: linear-gradient(195deg, rgba(108,99,255,1) 11.2%, rgb(56, 52, 139) 100.2%);
-    color: #fff;
-    text-transform: uppercase;
+    background: linear-gradient(195deg,#D1CFFF,#63618d);
+    color: #001949;
+    /* text-transform: uppercase; */
+    padding: 15px 25px; 
+    height: 100%;
     letter-spacing: 1px;
     cursor: pointer;
     transition: background-color .22s ease;
-    padding: 15px 25px;
     height: auto;
     border: none !important;
     border-radius: 5px !important;
-
+    font-size: var(--small-text);
     font-weight: bold;
     box-sizing: border-box;
 }   
 
-.donate-button a:hover{
-
-    text-decoration: none;
-    color:  #fff !important;
-    
+.donate-button:hover{
+    background: linear-gradient(195deg,#bcbaec 50%,#5d5a89);
+    color: #1d4694;
 }
 
 
@@ -215,24 +214,25 @@ form {
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(195deg, rgba(108,99,255,1) 11.2%, rgb(56, 52, 139) 100.2%);
-    color: #fff;
-    text-transform: uppercase;
+    background: linear-gradient(195deg,#D1CFFF,#63618d);
+    color: #001949;
+    /* text-transform: uppercase; */
     letter-spacing: 1px;
     cursor: pointer;
     transition: background-color .22s ease;
-    padding: 0px 15px;
+    padding: 0px 10px;
     height: 100%;
-    border: none !important;
-    border-radius: 5px !important;
-
     font-weight: bold;
-
+    border-radius: 5px !important;
+    border: 0px solid;
+    font-size: var(--small-text);
+    
 }
 
 .join-us__form .submit:hover {
-    background: linear-gradient(195deg, rgb(93, 84, 255) 11.2%, rgb(48, 43, 137) 100.2%);
-    
+    background: linear-gradient(195deg,#bcbaec 50%,#5d5a89);
+    color: #1d4694;
+
 }
 
 

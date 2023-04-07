@@ -1,15 +1,16 @@
-import Image from 'next/image'
 import { useState, useEffect, useCallback } from 'react'
+import { donationLink } from '@/_Constants';
 
 export default function JoinUsPage() {
     /* TASK: (DONE) When text is autofilled BG of input turns white when it needs to be transparent */ 
-    /* TASK: DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */
+    /* TASK: (DONE) DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */
     /* TASK: BG NEEDS TO CHANGE AT PHONE SIZE (MEDIA QUERY ALREADY IN CSS FILE) */
     /* TASK: UI and font needs to scale at very small screen size (sub 400 ish px)  */
-    /* TASK: Add functinality from coming soon page to here api call, honey trap etc etc. */
+    /* TASK: (DONE) Add functinality from coming soon page to here api call, honey trap etc etc. */
 
     const [msg, setMsg] = useState('');
     const [color, setColor] = useState('green');
+
 
     const requestAddToEmailList = useCallback(async (payload) => {
         try {
@@ -65,13 +66,18 @@ export default function JoinUsPage() {
     useEffect(() => {
         const inputFields = document.querySelectorAll('.join-us__form input');
         inputFields.forEach((field) => {
-            const style = window.getComputedStyle(field);
-            field.style.setProperty('-webkit-text-fill-color','white');
-            field.addEventListener('focus', () => {
-                field.style.setProperty('caret-color','white');
-            });
+            if (field.type !== "submit"){
+                const style = window.getComputedStyle(field);
+                field.style.setProperty('-webkit-text-fill-color','white');
+                field.addEventListener('focus', () => {
+                    field.style.setProperty('caret-color','white');
+                });
+            }
         });
     }, []);
+    function handleClick(){
+        window.open(donationLink,'_blank')
+    }
     
     return (
        <div className="join-us-page-wrapper" >
@@ -90,17 +96,16 @@ export default function JoinUsPage() {
                         <input type="email" className="join-us-email" name="email" placeholder="Email Address" required/>
                         <input type="text" className="special_req" name="special_req" />
                     </div>
-                    <input type="submit" className="submit" value="Join Today"/>
+                    <input type="submit" className="submit" value="Get Updates"/>
                 </form>
             </div>
             <p className="res-msg" style={{color}}>{msg ? msg : <>&nbsp;</> }</p>
             <p className="join-us-info-box">
                 We will send you updates on the project and application as we continue our endeavors.
             </p>
-            <button className="donate-button">
-                <a className="donate-button" href = "https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1">Donate to Support Soundscape</a>
+            <button className="donate-button" onClick={handleClick}>
+                Donate to Support Soundscape
             </button>
-            {/* <Image src="@/images/pill-white.png" width="20" height="20" /> */}
             <div className="bg-container" />
         </div>
         )
