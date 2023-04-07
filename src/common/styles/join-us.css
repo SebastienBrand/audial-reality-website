@@ -105,7 +105,7 @@
 
     z-index: 999999;
 
-    margin-bottom: 25px
+    margin-bottom: 12.5px
 }
 
 
@@ -245,6 +245,23 @@ form {
     flex-wrap: wrap;
 }
 
+.res-msg {
+    /* padding-top: 5px */
+    margin-top: 0px;
+    margin-bottom: 12.5px;
+    font-style: italic;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.join-us__form .special_req {
+    width: 0px;
+    height: 0px;
+    padding: none;
+    margin: none;
+    display: none;
+}
 
 
 
@@ -253,12 +270,9 @@ form {
         width: 350px;
     }
     
-    
-    
     .join-us-info-box {
         width: 350px;
     }
-
 
     .join-us__form input {
         flex-basis: 100%;
@@ -269,8 +283,7 @@ form {
         border: 1px solid lightgrey;
         border-bottom: 0px;
     }
-    
-    
+        
     .join-us__form input:nth-child(2) {
         border-radius: 0px 0px 0px 0px;
         border-bottom: 0px
