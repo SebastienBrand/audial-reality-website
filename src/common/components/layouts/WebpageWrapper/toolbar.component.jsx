@@ -4,6 +4,7 @@ import { FaApple, FaGooglePlay } from 'react-icons/fa'
 //import Image from 'next/image';
 //import Logo from "@/AR-Logo"
 
+import { Toolbar as ToolbarText} from '@/text/data.js';
 
 const ToolbarComponent = (props) => {
     
@@ -17,7 +18,7 @@ const ToolbarComponent = (props) => {
                 <FaGooglePlay size={'1.25em'} color={'white'}/>
             </div>
             <div className={`flex flex-center ${styles['toolbar-last-container']}`}>
-                IPSUM DALOR
+                {ToolbarText.LastContainer}
             </div>
         </div>
     );

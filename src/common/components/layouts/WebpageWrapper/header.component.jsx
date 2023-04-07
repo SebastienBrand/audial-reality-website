@@ -5,37 +5,16 @@ import Logo from "@/AR-Logo"
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { Header as HeaderText } from '@/text/data.js';
 
 const HeaderComponent = (props) => {
-    let temp_array = [{
-        title: 'Lorem',
-        link: 'https://google.com'
-    }, {
-        title: 'Ipsum',
-        link: 'https://google.com'
-    }, {
-        title: 'Dalor',
-        link: 'https://google.com'
-    }, {
-        title: 'Amut',
-        link: 'https://google.com'
-    }, {
-        title: 'labore',
-        link: 'https://google.com'
-    }
-    ]
-    var sign_up_button ={
-        title: 'Sign In | Sign Up',
-        link: 'https://google.com'
-    }
-
     return (
         <header className="flex flex-row">
-            <div className="flex flex-center fit-content header-logo-container"> 
-                <Image loading="lazy" src={Logo} alt="Audio Reality Logo" /> 
+            <div className="flex flex-center fit-content header-logo-container">
+                <Image loading="lazy" src={Logo} alt="Audio Reality Logo" />
             </div>
             <div className={`flex fill-horizontal flow-row justify-end ${styles['header-link-container']}`}>
-               {temp_array.map(( element, index ) => {
+                {HeaderText.buttons.map((element, index) => {
                     return (
                         /* DEV-TASK [Easy-Medium] (DONE): Make a clean animation for when any link is hovered on */
                         /* DEV-TASK [Easy-Medium]: Make the Sign In | Sign Up Its own button with a clean minimalistic animation */
@@ -45,10 +24,10 @@ const HeaderComponent = (props) => {
                             {element.title}
                         </Link>
                     );
-               })}
-            <Link className={`flex flex-center ${styles['header-signup-button']}`} href={sign_up_button.link}>
-                {sign_up_button.title}
-            </Link> 
+                })}
+                <Link className={`flex flex-center ${styles['header-signup-button']}`} href={HeaderText.join_us_button.link}>
+                    {HeaderText.join_us_button.title}
+                </Link>
             </div>
         </header>
     );

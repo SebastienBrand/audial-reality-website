@@ -4,13 +4,14 @@ import Link from 'next/link';
 
 
 import Image1 from '@/images/location.png';
-
+import { Homepage as HomepageText} from '@/text/data.js';
 
 import { BsChevronDoubleDown } from 'react-icons/bs'
 
 
 
 function ProgressPath(props){
+    
     return (
         <div className={`${styles['slider-progress-path']}`}>
             <div className={`${styles['slider-progress-section']}`}>
@@ -56,11 +57,11 @@ export default function Hero( props ){
     */
      return ( 
         <div className={`flex flow-col ${styles['hero-wrapper']}`}>
-             <span className={`${styles['hero-background-text']}`}> Auditory Enhancements </span>
-             <h2>Lorem Ipsum Dalor</h2>
-             <h1>Big Super Fancy Title</h1>
+             <span className={`${styles['hero-background-text']}`}>{HomepageText.HeroSection.span}</span>
+             <h2>{HomepageText.HeroSection.h2}</h2>
+             <h1>{HomepageText.HeroSection.h1}</h1>
              <Image src={Image1} alt="" />
-             <h5>incididunt ut labore et dolore magna</h5>
+             <h5>{HomepageText.HeroSection.h5}</h5>
             <ProgressPath />
             <div className={`flex flow-row justify-sb ${styles['continue-scrolling-section']}`}>
                 <BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>
