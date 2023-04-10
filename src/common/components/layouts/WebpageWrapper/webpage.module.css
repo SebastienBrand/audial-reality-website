@@ -87,7 +87,7 @@
     height: var(--toolbar-vertical-height);
     width: var(--toolbar-vertical-width);
 
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0);
 
     border-radius: calc(var(--toolbar-vertical-width)/2);
     border: 2.5px solid rgba(255, 255, 255, 0.65);
@@ -100,14 +100,14 @@
     margin-top: 10px;
     height: 50px;
     width: calc(var(--toolbar-vertical-width) - 5px);
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0);
 }
 
 .toolbar-last-container {
     flex: 1;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0);
 }
 
 
