@@ -105,7 +105,7 @@
 
     z-index: 999999;
 
-    margin-bottom: 25px
+    margin-bottom: 12.5px
 }
 
 
@@ -123,31 +123,30 @@
     z-index: 999999;
 }
 
-.donate-button, .donate-button a{
+.donate-button {
     z-index: 999999;
 
     text-decoration: none;
 
-    background: linear-gradient(195deg, rgba(108,99,255,1) 11.2%, rgb(56, 52, 139) 100.2%);
-    color: #fff;
-    text-transform: uppercase;
+    background: linear-gradient(195deg,#D1CFFF,#63618d);
+    color: #001949;
+    /* text-transform: uppercase; */
+    padding: 15px 25px; 
+    height: 100%;
     letter-spacing: 1px;
     cursor: pointer;
     transition: background-color .22s ease;
-    padding: 15px 25px;
     height: auto;
     border: none !important;
     border-radius: 5px !important;
-
+    font-size: var(--small-text);
     font-weight: bold;
     box-sizing: border-box;
 }   
 
-.donate-button a:hover{
-
-    text-decoration: none;
-    color:  #fff !important;
-    
+.donate-button:hover{
+    background: linear-gradient(195deg,#bcbaec 50%,#5d5a89);
+    color: #1d4694;
 }
 
 
@@ -171,9 +170,7 @@ form {
     border: 1px solid lightgrey;
 
     flex-basis: 50%;
-    color: rgba(255, 255, 255, var(--high-emphasis-text));
-
-  
+    color: rgba(255, 255, 255, var(--high-emphasis-text));  
 }
 
 .join-us__form input::placeholder { color: rgba(255, 255, 255, var(--high-emphasis-text)) !important; }
@@ -199,6 +196,13 @@ form {
 
 }
 
+.join-us__form input:-webkit-autofill { 
+    -webkit-box-shadow: inset 0 0 0px 9999px #0F2d66 !important; 
+    box-shadow: inset 0 0 0px 9999px #0F2d66 !important; 
+    background-color: #0F2d66 !important;
+    color: #fff !important;
+} 
+
 .join-us__form .join-us-email {
     width: 100%;
     padding: 10px 10px 10px 10px;
@@ -210,24 +214,25 @@ form {
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(195deg, rgba(108,99,255,1) 11.2%, rgb(56, 52, 139) 100.2%);
-    color: #fff;
-    text-transform: uppercase;
+    background: linear-gradient(195deg,#D1CFFF,#63618d);
+    color: #001949;
+    /* text-transform: uppercase; */
     letter-spacing: 1px;
     cursor: pointer;
     transition: background-color .22s ease;
-    padding: 0px 15px;
+    padding: 0px 10px;
     height: 100%;
-    border: none !important;
-    border-radius: 5px !important;
-
     font-weight: bold;
-
+    border-radius: 5px !important;
+    border: 0px solid;
+    font-size: var(--small-text);
+    
 }
 
 .join-us__form .submit:hover {
-    background: linear-gradient(195deg, rgb(93, 84, 255) 11.2%, rgb(48, 43, 137) 100.2%);
-    
+    background: linear-gradient(195deg,#bcbaec 50%,#5d5a89);
+    color: #1d4694;
+
 }
 
 
@@ -240,6 +245,24 @@ form {
     flex-wrap: wrap;
 }
 
+.res-msg {
+    /* padding-top: 5px */
+    margin-top: 0px;
+    margin-bottom: 12.5px;
+    font-style: italic;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.join-us__form .special_req {
+    width: 0px;
+    height: 0px;
+    padding: none;
+    margin: none;
+    display: none;
+}
+
 
 
 @media all and (max-width: 775px) { 
@@ -247,12 +270,9 @@ form {
         width: 350px;
     }
     
-    
-    
     .join-us-info-box {
         width: 350px;
     }
-
 
     .join-us__form input {
         flex-basis: 100%;
@@ -262,11 +282,8 @@ form {
         border-radius: 5px 5px 0px 0px;
         border: 1px solid lightgrey;
         border-bottom: 0px;
-
-    
     }
-    
-    
+        
     .join-us__form input:nth-child(2) {
         border-radius: 0px 0px 0px 0px;
         border-bottom: 0px
