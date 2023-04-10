@@ -4,7 +4,7 @@ import SVG from '@/images/pedestrian_crossing.svg'
 
 export default function JoinUsPage() {
     /* TASK: When text is autofilled BG of input turns white when it needs to be transparent */ 
-    /* TASK: DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */
+    /* (DONE) TASK: DONATE Button needs to send to this link -> https://www.flipcause.com/secure/cause_pdetails/MTc5NDQ1 */ 
     /* TASK: BG NEEDS TO CHANGE AT PHONE SIZE (MEDIA QUERY ALREADY IN CSS FILE) */
     /* TASK: UI and font needs to scale at very small screen size (sub 400 ish px)  */
     /* TASK: Add functinality from coming soon page to here api call, honey trap etc etc. */
