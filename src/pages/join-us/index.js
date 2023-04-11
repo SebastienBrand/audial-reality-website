@@ -1,5 +1,10 @@
+
 import { useState, useEffect, useCallback } from 'react'
 import { donationLink } from '@/_Constants';
+import Image from 'next/image'
+import SVG from '@/images/pedestrian_crossing.svg'
+import Link from 'next/link';
+
 
 export default function JoinUsPage() {
     /* TASK: (DONE) When text is autofilled BG of input turns white when it needs to be transparent */ 
@@ -106,6 +111,9 @@ export default function JoinUsPage() {
             <button className="donate-button" onClick={handleClick}>
                 Donate to Support Soundscape
             </button>
+            <p className="join-us-footer ">
+            An <Link href="https://new.rcos.io/" style={{textDecoration: 'none', color: 'red'/*'#4a88e8'*/}}> RCOS </Link> Project
+            </p>
             <div className="bg-container" />
         </div>
         )

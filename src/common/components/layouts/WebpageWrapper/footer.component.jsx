@@ -57,7 +57,7 @@ export default function Footer(props) {
                     <div className="flex">&nbsp; Privacy Policy &nbsp;</div> | 
                     <div className="flex">&nbsp; 2023 Soundscape </div>
                 </div>
-                  <div className={`${styles['footer-bottom-content']}`}>
+                <div className={`${styles['footer-bottom-content']}`}>
                     <p>
                     An <Link href="https://new.rcos.io/" style={{textDecoration: 'none', color: 'red'/*'#4a88e8'*/}}> RCOS </Link> Project
                     </p>
