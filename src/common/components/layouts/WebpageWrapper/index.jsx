@@ -23,7 +23,7 @@ const WebpageWrapper = (props) => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-    }, []);
+    });
    
     useEffect(() => {
         //console.log("Percent Scrolled Is: ", scrollPercentage, "%" );

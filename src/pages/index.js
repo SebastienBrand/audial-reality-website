@@ -18,7 +18,6 @@ import { getApolloClient } from "../lib/apollo-client";
 
 export default function Home({ page, posts }) {
   console.log(posts)
-
   return (
       <WebpageWrapper>
         <HeroSection />
@@ -33,7 +32,6 @@ export default function Home({ page, posts }) {
 
 
 export async function getStaticProps({ locale }) {
-
   try {
     const apolloClient = getApolloClient();
     
@@ -98,8 +96,7 @@ export async function getStaticProps({ locale }) {
         posts,
       },
     };
-  }
-  catch {
+  } catch(error) {
     return { props: { } }
   }
 }

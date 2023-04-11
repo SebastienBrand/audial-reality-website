@@ -12,24 +12,26 @@ class ComingSoonPage extends React.Component {
     }
   }
 
-
   requestAddToEmailList = async (payload) => {
-    const fetchRoute = "/api/promotion/coming-soon";
-    const response = await fetch(fetchRoute, {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-    });
     
-    const data = await response.json();
-
-    if( data.status >= 400 ){
-       return { msg: `Error ${data.status}: ${data.title}`, color: "red"  }
+    if (payload.special_req && payload.special_req.trim() !== ''){
+        return  { msg: `Error: We are unable to process your request at this time.`, color: "yellow"  };
     } else {
-        return { msg: "You have been added to the email list", color: "green"  }
-    }    
+        const fetchRoute = "/api/promotion/coming-soon";
+        const response = await fetch(fetchRoute, {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+            
+        const data = await response.json();
+        if( data.status >= 400){
+            return { msg: `Error ${data.status}: ${data.title}`, color: "red"  }
+        } else {
+            return { msg: "You have been added to the email list", color: "green"  }
+        }    
+    }
 } 
-
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,6 +39,7 @@ class ComingSoonPage extends React.Component {
         email: e.target.email.value,
         firstName: e.target.given_name.value,
         lastName: e.target.family_name.value,
+        special_req: e.target.special_req.value,
     })
 
     if( response.msg ){
@@ -48,15 +51,14 @@ class ComingSoonPage extends React.Component {
     return(
             <div className="uc__wrapper">
                 <div className="uc__details">
-                    <h1 className="title">Join Our Email List!</h1>
+                    <h1 className="title">Coming Soon!</h1>
                     <h3 className="intro">
-                       We are working hard to give you a new experience to aid in navigating the world!   
+                        We are working hard to give you a new experience to aid in navigating the world.   
                     </h3>
                     <p className="uc__description">
-                        Our Site is almost ready, so are you ready for the most user-friendly navigation aid tool? 
-                        Be one of the first to experience it by entering your email and name below. As we will notify you as soon as Soundscape has updates
-                        and goes live.  
-                        We are in this together, our community striving to reach our goals one challenge at a time! 
+                        Our Site is almost ready, so are you ready for the most user-friendly navigational aid tool? 
+                        Be one of the first to experience it by entering your email and name below. As we will notify you as soon as Soundscape goes live and has any updates.    
+                        We are in this together, our community striving to reach our goals one obstacle at a time! 
                     </p>
                     <div className="uc__subscribe">
                         <h3>Get Notified When We Go Live</h3>
@@ -66,9 +68,11 @@ class ComingSoonPage extends React.Component {
                                     <input type="text" className="fn-input" name="given_name" placeholder="First Name" required />
                                     <input type="text"  className="ln-input" name="family_name" placeholder="Last Name" required />
                                 </div>
-                                <input type="email" className="email" name="email" placeholder="Email Address" required/>
-                                <input type="submit" className="submit" value="Get Notified" />
+                                <input type="email" className="email" name="email" placeholder="Email Address"required/>
+                                <input type="text" className="special_req" name="special_req" placeholder=""/>
+                                <input type="submit" className="submit" value="Get Notified"/>
                                 <input type="submit" className="submit-small" value=""/>
+
                             </form>
                         </div>
                         <p className="res-msg" style={{color: this.state.color}}>{this.state.msg}</p>

@@ -25,8 +25,7 @@ export default function Button(props){
     return (
         <div className={`${styles['button-box']}`}>
             <Link href="example.com"> 
-            <Image>            
-            </Image>
+            {/* Commented as it as throwing error in build <Image></Image>*/}
             <p>{props.description}</p>
             </Link>
         </div>
