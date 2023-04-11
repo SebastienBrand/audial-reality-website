@@ -11,6 +11,8 @@ export default function JoinUsPage() {
     const [msg, setMsg] = useState('');
     const [color, setColor] = useState('green');
 
+    console.log("App: "+process.env.APP_ENV);
+    console.log("Server: "+process.env.SERVER_ENV);
 
     const requestAddToEmailList = useCallback(async (payload) => {
         try {
@@ -80,6 +82,7 @@ export default function JoinUsPage() {
     }
     
     return (
+        
        <div className="join-us-page-wrapper" >
             <div className="join-us-logo-box" ><h1>Soundscape</h1><span>for everyone</span></div>
             <h2 className="join-us-title-box" >Coming Soon!</h2>
