@@ -123,6 +123,7 @@
     z-index: 999999;
 }
 
+/* RCOS link styling */
 .join-us-footer {
     height: auto;
     width: 600px;
@@ -283,7 +284,22 @@ form {
 @media all and (max-width: 775px) { 
     .join-us-form-box {
         width: 350px;
+        margin-bottom: 10px;
 
+    }
+
+    .join-us-page-wrapper{
+        font-size: 14px;
+    }
+
+    .res-msg{
+        padding-top: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-style: italic;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     
     .join-us-info-box {
@@ -315,14 +331,45 @@ form {
     
     }
 
+    /* RCOS link styling */
+    .join-us-footer {
+        height: auto;
+        width: 600px;
+        color: rgba(255, 255, 255, var(--high-emphasis-text));
+    
+        text-align: center;
+    
+        margin-bottom: 10px;
+        font-size: var(--smallest-text);
+
+        position: absolute;
+        bottom: 0px;
+    
+        z-index: 999999;
+    }
+
     .bg-container {
-        height: 30vh;
+        height: 45vh;
         
     }
 
 }
 
 @media all and (max-width: 400px) { 
+
+    .join-us-page-wrapper{
+        font-size: 14px;
+    }
+
+    .res-msg{
+        padding-top: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-style: italic;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
     .join-us-para-box {
         width: 350px;
@@ -342,12 +389,13 @@ form {
     
         z-index: 999999;
     
-        margin-bottom: 25px
+        margin-bottom: 10px;
 
     }
     
     .join-us-info-box {
         width: 150px;
+        height: 60px;
 
     }
 
@@ -376,7 +424,24 @@ form {
     
     }
 
+    /* RCOS link styling */
+    .join-us-footer {
+        height: auto;
+        width: 600px;
+        color: rgba(255, 255, 255, var(--high-emphasis-text));
+    
+        text-align: center;
+    
+        margin-bottom: 10px;
+        font-size: var(--smallest-text);
+
+        position: absolute;
+        bottom:0px;
+    
+        z-index: 999999;
+    }
+
     .bg-container {
-        height: 25vh;
+        height: 45vh;
     }
 }
