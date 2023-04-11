@@ -30,7 +30,6 @@ export default function Home({ page, posts }) {
 }
 
 
-
 export async function getStaticProps({ locale }) {
   try {
     const apolloClient = getApolloClient();

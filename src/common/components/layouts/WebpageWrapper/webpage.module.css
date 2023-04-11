@@ -100,14 +100,14 @@
     margin-top: 10px;
     height: 50px;
     width: calc(var(--toolbar-vertical-width) - 5px);
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0);
 }
 
 .toolbar-last-container {
     flex: 1;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0);
 }
 
 
