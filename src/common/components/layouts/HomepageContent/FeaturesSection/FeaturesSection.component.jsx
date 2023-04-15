@@ -82,8 +82,8 @@ export default function FeaturesSection( props ){
                         <h5>{ my_array[nextItem].title}</h5>
                     </div>
              
-                    <button className={`${styles['features-slider-container-l-button']}`} onClick={() => decrementItem()}><
-                        BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>
+                    <button className={`${styles['features-slider-container-l-button']}`} onClick={() => decrementItem()}>
+                        <BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>
                     </button>
                     <button className={`${styles['features-slider-container-r-button']}`} onClick={() => incrementItem()} >
                         <BsChevronDoubleDown size={'2.25em'} color={'rgba(255, 255, 255, var(--high-emphasis-text))'}/>
