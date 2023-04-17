@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "install": "npm install",
     "dev": "next dev",
-    "build": "npm run install && next build",
+    "build": "npm install && next build",
     "start": "next start",
     "lint": "next lint"
   },
