@@ -1,9 +1,6 @@
 var Mailchimp = require('mailchimp-api-v3')
 
-const mc_api_key = process.env.MAILCHIMP_API_KEY
-const mc_audience_id =  process.env.MAILCHIMP_AUDIENCE_ID
-
-const mailchimp = new Mailchimp( mc_api_key );
+const mailchimp = new Mailchimp( process.env.MAILCHIMP_API_KEY );
 
 export default function handler(req, res) {
     const { method } = req; 
@@ -12,7 +9,7 @@ export default function handler(req, res) {
     
     switch ( method ) { 
         case "POST": 
-            mailchimp.post(`/lists/${mc_audience_id}/members`, {
+            mailchimp.post(`/lists/${process.env.MAILCHIMP_AUDIENCE_ID}/members`, {
                 email_address: email,
                 status: 'subscribed',
                 "merge_fields": {
