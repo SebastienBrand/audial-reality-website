@@ -246,13 +246,15 @@ form {
 }
 
 .res-msg {
-    /* padding-top: 5px */
-    margin-top: 0px;
-    margin-bottom: 12.5px;
-    font-style: italic;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+       /* padding-top: 5px; */
+       margin-top: 0px;
+       margin-bottom: 12.5px;
+       font-style: italic;
+       /* width: 100%; */
+       background: transparent;
+       display: flex;
+       justify-content: center;
+       line-height: 0px;
 }
 
 .join-us__form .special_req {

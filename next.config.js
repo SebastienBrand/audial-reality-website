@@ -8,6 +8,15 @@ const nextConfig = {
     locales: ["en", "es", "fr"],
     defaultLocale: "en",
   },
+  async redirects() {
+    return (process.env.ENVIORNMENT === "prod") ? [
+               {
+                   source: '/',
+                   destination: '/join-us',
+                   permanent: true,
+                },
+           ] : []
+   },
 }
 
 module.exports = nextConfig

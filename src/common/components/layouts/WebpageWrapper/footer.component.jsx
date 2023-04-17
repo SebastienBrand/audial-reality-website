@@ -35,7 +35,7 @@ export default function Footer(props) {
                     <div className={`${styles['footer-section-list-box']}`}>
                     {FooterText.Top.ThirdSection.QuickLinks.map((element, index) => {
                         return (
-                            <li><a href={element.link}>{element.name}</a></li>
+                            <li key={`footer-li-${index}`}><a key={`element-${index}`} href={element.link}>{element.name}</a></li>
                         )
                     })}
                     </div>

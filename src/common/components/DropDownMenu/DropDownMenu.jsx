@@ -32,7 +32,6 @@ export default function DropDownMenu() {
                         })}
 
             </DropdownMenu.Item>
-
         </DropdownMenu.Content>
     </DropdownMenu.Root>
     </div>;

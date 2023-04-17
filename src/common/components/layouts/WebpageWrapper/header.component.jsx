@@ -36,8 +36,8 @@ const HeaderComponent = (props) => {
             <DropDownMenu/>
             </div>
 
-               <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={sign_up_button.link}>
-                    {sign_up_button.title}
+               <Link className={`flex flex-center ${/*styles['header-signup-button']*/""}`} href={HeaderText.join_us_button.link}>
+                    {HeaderText.join_us_button.title}
                </Link>
 
             </div>
