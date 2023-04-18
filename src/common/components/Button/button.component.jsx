@@ -1,6 +1,6 @@
 import styles from "./Button.module.css"
 import propTypes from "prop-types"
-//import Image from "next/Image";
+import Image from "next/Image";
 //import Link from "next/Link"
 
 

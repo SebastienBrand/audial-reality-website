@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
-//import styles from './webpage.module.css'
+
 import styles from './webpage.module.css'
 import Logo from "@/AR-Logo"
 
@@ -33,9 +33,9 @@ export default function Footer(props) {
                 <div className={`${styles['footer-section']} ${styles['third-section']}`}>
                     <h4>{FooterText.Top.ThirdSection.h4}</h4>
                     <div className={`${styles['footer-section-list-box']}`}>
-                    {FooterText.Top.ThirdSection.QuickLinks.map((element, index) => {
+                    {FooterText.Top.ThirdSection.QuickLinks.map((element) => {
                         return (
-                            <li><a href={element.link}>{element.name}</a></li>
+                            <li key={item.id}><a href={element.link}>{element.name}</a></li>
                         )
                     })}
                     </div>
