@@ -1,7 +1,7 @@
 import styles from "./Button.module.css"
 import propTypes from "prop-types"
-import Image from "next/Image";
-//import Link from "next/Link"
+import Image from "next/image"
+import Link from "next/link"
 
 
 // <Button type="circle" />
@@ -24,10 +24,10 @@ export default function Button(props){
     }
     return (
         <div className={`${styles['button-box']}`}>
-            {/*<Link href="example.com">*/}
+            <Link href="example.com">
             {/* Commented as it as throwing error in build <Image></Image>*/}
             <p>{props.description}</p>
-            {/*</Link>*/}
+            </Link>
         </div>
     )
 }

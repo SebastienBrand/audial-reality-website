@@ -17,9 +17,6 @@ function PostShowcase(props){
     )
 }
 
-
-
-
 export default function BlogSection(props){
 
     console.log(props.allPosts)
