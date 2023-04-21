@@ -15,6 +15,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#deploy-on-vercel">Deploying</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#resources">Resources</a></li>
@@ -52,17 +53,11 @@ First, run the development server:
   
 
 ```bash
-
 npm run dev
-
 # or
-
 yarn dev
-
 # or
-
 pnpm dev
-
 ```
 
 
@@ -115,6 +110,19 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Contributing
+Contributions are what make the open source community such an inviting place to learn and create. If you want to contribue
+1. Branch the Project
+2. Commit your Changes (`git commit -a -m 'Your Feature's commit message'`)
+3. Push to the right Branch (`git push origin branch_you_commit_to`)
+4. Open a Pull Request
+## License
+
+This product is distributed under the Apache License 2.0. See `LICENSE.txt` for more information
+
+## Resources
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -144,5 +152,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 [JQuery-url]: https://jquery.com
 [Next.js]:https://img.shields.io/badge/-NextJS-000000?logo=nextdotjs&style=for-the-badge
 [Next.js-url]:https://nextjs.org/
-[Node.js]:https://img.shields.io/badge/next.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[Node.js]:https://img.shields.io/badge/nodejs-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node.js-url]:https://nodejs.org/en
