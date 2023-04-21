@@ -1,10 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ol>
+</details>
+
+<!-- About The Project-->
+## About The Project
+Audial Reality is an open-source group dedicated to keeping the ios app Soundscape, an ex-Microsoft project, online past the server shutdown date of June 30th. We are working with a global consortium to ensure this happens.
+
+### Built With
+The Audial Reality Website uses the following
+
+  | Frameworks                    | Technologies                      |
+| ---:                          | :----                             |
+| [![MYSQL]][MYSQL-url]         | [![JavaScript]][JavaScript-url]   |        
+| [![Wordpress]][Wordpress-url] | ![CSS]                            |
+| [![React.js]][React-url]      |                                   |
+| [![Gatsby.js]][Gatsby-url]    |                                   |
+| [![Bootstrap]][Bootstrap-url] |                                   |
+| [![GraphQL]][GraphQL-url]     |                                   |
+| [![Next.js]][Next.js-url]     |                                   |
+| [![Node.js]][Node.js-url]     |                                   |
 
   
+
 
 ## Getting Started
 
-  
+  This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 
 First, run the development server:
 
@@ -74,19 +115,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-### Built With
-The Audial Reality Website uses the following
-
-  | Frameworks                    | Technologies                      |
-| ---:                          | :----                             |
-| [![MYSQL]][MYSQL-url]         | [![JavaScript]][JavaScript-url]   |        
-| [![Wordpress]][Wordpress-url] | ![CSS]                            |
-| [![React.js]][React-url]      |                                   |
-| [![Gatsby.js]][Gatsby-url]    |                                   |
-| [![Bootstrap]][Bootstrap-url] |                                   |
-| [![GraphQL]][GraphQL-url]     |                                   |
-| [![Next.js]][Next.js-url]     |                                   |
-| [![Node.js]][Node.js-url]     |                                   |   
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
