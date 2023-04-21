@@ -86,6 +86,7 @@ The Audial Reality Website uses the following
 | [![Bootstrap]][Bootstrap-url] |                                   |
 | [![GraphQL]][GraphQL-url]     |                                   |
 | [![Next.js]][Next.js-url]     |                                   |
+| [![Node.js]][Node.js-url]     |                                   |   
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -115,3 +116,5 @@ The Audial Reality Website uses the following
 [JQuery-url]: https://jquery.com
 [Next.js]:https://img.shields.io/badge/-NextJS-000000?logo=nextdotjs&style=for-the-badge
 [Next.js-url]:https://nextjs.org/
+[Node.js]:https://img.shields.io/badge/next.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+[Node.js-url]:https://nodejs.org/en
